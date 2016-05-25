@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Артем Зубенко](https://up.htmlacademy.ru/adaptive/7/user/81259).
-* Наставник: `Неизвестно`.
+* Наставник: Ольга Одноколова.
 
 ---
 
