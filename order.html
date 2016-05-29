@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+
+    <header class="page-header container">
+        <div class="page-header__logo">
+            <img src="img/logo.pmg" alt="mishka-logo">
+        </div>
+        <nav class="main-nav">
+            <button class="main-nav__toogle"></button>
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="">Каталог товаров</a></li>
+                <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
+                <li class="main-nav__item"><a href="">Поиск по сайту</a></li>
+                <li class="main-nav__item"><a href="">Корзина: пока пуста</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        
+        <article class="custom-service">
+            <div class="custom-service__header">Вязание на заказ</div>
+            <div class="custom-service__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали</div>
+        </article>
+        
+        <article class="form-order">
+            <form action="post" class="">
+                <h3 class="form-order__section-title">Тип</h3>
+                <input type="radio" name="type" value="interior">Аксессуар для интерьера
+                <input type="radio" name="type" value="toys">Детская игрушка
+                <h3 class="form-order__section-title">Цвет</h3>
+                <input type="checkbox" name="white" class="form-order__colors">Белый
+                <input type="checkbox" name="gray" class="form-order__colors">Серый
+                <input type="checkbox" name="tiffany" class="form-order__colors">«Тиффани»
+                <input type="checkbox" name="black" class="form-order__colors">Черный
+                <input type="checkbox" name="pink" class="form-order__colors">Розовый
+                <input type="checkbox" name="orange" class="form-order__colors">Оранжевый
+                <h3 class="form-order__section-title">ФИО</h3>
+                <label for="user-surname">Фамилия:</label>
+                <input id="user-surname" type="text" name="surname" class="form-order__fio" placeholder="Укажите фамилию">
+                <label for="user-name">Имя:</label>
+                <input id="user-name" type="text" name="name" class="form-order__fio" placeholder="Введите ваше имя">
+                <label for="user-fathername">Отчество</label>
+                <input id="user-fathername" type="text" name="name" class="form-order__fio" placeholder="Отчество, если желаете">
+                <h3 class="form-order__section-title">Телефон</h3>
+                <input type="tel" class="form-order__tel" placeholder="+7 XXX XX XX">
+                <h3 class="form-order__section-title">e-mail</h3>
+                <input type="email" class="form-order__email" placeholder="Ваш e-mail">
+                <h3 class="form-order__section-title">Доп</h3>
+                <textarea rows="" cols="" class="form-order__user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <button type="submit" class="btn-general form-order__btn-send-order">Отправить заказ</button>
+            </form>
+        </article>
+        
+    </main>
+    
+    <footer class="container">
+        <section class="social-links">
+            <ul class="social-links__list">
+                <li class="social-links__inst"></li>
+                <li class="social-links__fb"></li>
+                <li class="social-links__tw"></li>
+            </ul>
+        </section>
+        
+        <section class="develop-company">
+            <div class="develop-company__name">Разработано</div>
+        </section>
+    </footer>
+
+  </body>
+</html>
