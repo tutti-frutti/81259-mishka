@@ -6,7 +6,141 @@
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Продвинутый HTML и CSS</a>».</p>
+    <header class="page-header container">
+        <div class="page-header__logo">
+            <img src="img/logo.pmg" alt="mishka-logo">
+        </div>
+        <nav class="main-nav">
+            <button class="main-nav__toogle"></button>
+            <ul class="main-nav__items">
+                <li class="main-nav__item"><a href="">Каталог товаров</a></li>
+                <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
+                <li class="main-nav__item"><a href="">Поиск по сайту</a></li>
+                <li class="main-nav__item"><a href="">Корзина: пока пуста</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="product-category container">
+            <div class="product-category__showcase">
+                <p class="product-category__showcase-text">Милые штуки ручной работы для дома</p>
+            </div>
+            <div class="product-category__interior">
+                <a href="#" class="product-category__link">Предметы интерьера</a>
+            </div>
+            <div class="product-category__toys">
+                <a href="#" class="product-category__link">Детские игрушки</a>
+            </div>
+        </article>
+
+        <article class="week-product container">
+            <h3 class="week-product__tittle">Вязаные корзинки</h3>
+            <p class="week-product__overall-text">Товар недели</p>
+            <div class="week-product__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</div>
+            <table class="week-product__options">
+                <tr>
+                    <td class="week-product__options-main">Цвет:</td>
+                    <td class="week-product__options-meaning">«Тиффани»/серый</td>
+                </tr>
+                <tr>
+                    <td class="week-product__options-main">Диаметр:</td>
+                    <td class="week-product__options-meaning">25 см</td>
+                </tr>
+                <tr>
+                    <td class="week-product__options-main">Высота:</td>
+                    <td class="week-product__options-meaning">15 см</td>
+                </tr>
+            </table>
+            <div class="week-product__foto">
+                <img src="" alt="">
+            </div>
+            <div class="week-product__price">Цена 990 руб.</div>
+            <a class="week-product__btn-order" type="button">Заказать</a>
+        </article>
+
+        <div class="page-divider"></div>
+
+        <article class="about-us container">
+            <h3 class="about-us__title title-for-sections">Коротко о нас:</h3>
+            <div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Экологически чистые материалы</div>
+            </div>
+            <div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Скандинаский стиль по российской цене</div>
+            </div><div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Увеличивает лайки на фотографиях</div>
+            </div><div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Связано в ручную с любовью и умилением</div>
+            </div><div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Поддержка отечественного производителя</div>
+            </div><div class="about-us__wrapper">
+                <div class="about-us__icon">
+                    <img src="" alt="">
+                </div>
+                <div class="about-us__descr">Поставляются в подарочной упаковке</div>
+            </div>
+        </article>
+
+        <article class="reviews slider container">
+            <h3 class="reviews__title title-for-sections">Отзывы</h3>
+            <input class="slider__input-prev" type="radio" id="">
+            <div class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</div>
+            <div class="reviews__comments">
+            <div class="reviews__author">Анастасия Красильникова</div>
+            <div class="reviews__author-web-name">@misssssis</div>
+            </div>
+            <a class="btn-reviews__write">Написать</a>
+        </article>
+
+        <div class="page-divider"></div>
+
+        <article class="contacts container">
+            <h3 class="contacts__title title-for-sections">Контакты</h3>
+            <div class="contacts__e-contacts">
+            <div class="contacts__adresses">e-mail:</div>
+            <div class="contacts__destination"><a class="contacts__destination-email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
+            </div>
+            <div class="contacts__real-contacts">
+            <div class="contacts__adresses">адрес:</div>
+            <div class="contacts__destination">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</div>
+            </div>
+        </article>
+
+        <article class="inter-map">
+            <iframe src="" frameborder="0"></iframe>
+            <a class="btn-general inter-map__btn-write-us">Напишите нам</a>
+        </article>
+    </main>
+
+    <footer class="container">
+        <section class="social-links">
+            <ul class="social-links__list">
+                <li class="social-links__inst"></li>
+                <li class="social-links__fb"></li>
+                <li class="social-links__tw"></li>
+            </ul>
+        </section>
+
+        <section class="develop-company">
+            <div class="develop-company__name">Разработано</div>
+        </section>
+    </footer>
 
   </body>
 </html>
