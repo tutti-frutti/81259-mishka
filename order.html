@@ -20,45 +20,65 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="container">
-        
-        <article class="custom-service">
-            <div class="custom-service__header">Вязание на заказ</div>
-            <div class="custom-service__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали</div>
+
+        <article class="promo-section">
+            <div class="promo-general">Вязание на заказ</div>
+
         </article>
-        
+
+        <div class="custom-service__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали</div>
+
         <article class="form-order">
             <form action="post" class="">
-                <h3 class="form-order__section-title">Тип</h3>
-                <input type="radio" name="type" value="interior">Аксессуар для интерьера
-                <input type="radio" name="type" value="toys">Детская игрушка
-                <h3 class="form-order__section-title">Цвет</h3>
-                <input type="checkbox" name="white" class="form-order__colors">Белый
-                <input type="checkbox" name="gray" class="form-order__colors">Серый
-                <input type="checkbox" name="tiffany" class="form-order__colors">«Тиффани»
-                <input type="checkbox" name="black" class="form-order__colors">Черный
-                <input type="checkbox" name="pink" class="form-order__colors">Розовый
-                <input type="checkbox" name="orange" class="form-order__colors">Оранжевый
-                <h3 class="form-order__section-title">ФИО</h3>
+
+                <div class="radio-buttons-wrapper">
+                <span class="form-order__section-title">Тип</span>
+                <input type="radio" id="interior" name="type" value="interior">
+                <label for="interior">Аксессуар для интерьера</label>
+                <input type="radio" id="toys" name="type" value="toys">
+                <label for="toys">Детская игрушка</label>
+                </div>
+
+                <div class="checkboxes-wrapper">
+                <span class="form-order__section-title">Цвет</span>
+                <input type="checkbox" id="white" name="white" class="form-order__colors">
+                <label for="white">Белый</label>
+                <input type="checkbox" id="gray" name="gray" class="form-order__colors">
+                <label for="gray">Серый</label>
+                <input type="checkbox" id="tiffany" name="tiffany" class="form-order__colors">
+                <label for="tiffany">«Тиффани»</label>
+                <input type="checkbox" id="black" name="black" class="form-order__colors">
+                <label for="black">Черный</label>
+                <input type="checkbox" id="pink" name="pink" class="form-order__colors">
+                <label for="pink">Розовый</label>
+                <input type="checkbox" id="orange" name="orange" class="form-order__colors">
+                <label for="orange">Оранжевый</label>
+                </div>
+
+                <div class="fio-wrapper">
+                <span class="form-order__section-title">ФИО</span>
                 <label for="user-surname">Фамилия:</label>
                 <input id="user-surname" type="text" name="surname" class="form-order__fio" placeholder="Укажите фамилию">
                 <label for="user-name">Имя:</label>
                 <input id="user-name" type="text" name="name" class="form-order__fio" placeholder="Введите ваше имя">
                 <label for="user-fathername">Отчество</label>
                 <input id="user-fathername" type="text" name="name" class="form-order__fio" placeholder="Отчество, если желаете">
-                <h3 class="form-order__section-title">Телефон</h3>
+                <span class="form-order__section-title">Телефон</span>
                 <input type="tel" class="form-order__tel" placeholder="+7 XXX XX XX">
-                <h3 class="form-order__section-title">e-mail</h3>
+                <span class="form-order__section-title">e-mail</span>
                 <input type="email" class="form-order__email" placeholder="Ваш e-mail">
-                <h3 class="form-order__section-title">Доп</h3>
+                </div>
+
+                <span class="form-order__section-title">Доп</span>
                 <textarea rows="" cols="" class="form-order__user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
                 <button type="submit" class="btn-general form-order__btn-send-order">Отправить заказ</button>
             </form>
         </article>
-        
+
     </main>
-    
+
     <footer class="container">
         <section class="social-links">
             <ul class="social-links__list">
@@ -67,7 +87,7 @@
                 <li class="social-links__tw"></li>
             </ul>
         </section>
-        
+
         <section class="develop-company">
             <div class="develop-company__name">Разработано</div>
         </section>
