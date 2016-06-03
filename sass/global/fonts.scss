@@ -1,0 +1,44 @@
+@charset "UTF-8"
+@font-face {
+	font-family: "Verdana";
+	src: url("../fonts/Verdana-Bold.woff2") format("woff2"),
+		url("../fonts/Verdana-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@charset "UTF-8"
+@font-face {
+	font-family: "Tahoma";
+	src: url("../fonts/Tahoma-Bold.woff2") format("woff2"),
+		url("../fonts/Tahoma-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@charset "UTF-8"
+@font-face {
+	font-family: "Verdana";
+	src: url("../fonts/Verdana.woff2") format("woff2"),
+		url("../fonts/Verdana.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@charset "UTF-8"
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/opensans.woff2") format("woff2"),
+		url("../fonts/opensans.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@charset "UTF-8"
+@font-face {
+	font-family: "Open Sans";
+	src: url("../fonts/opensansbold.woff2") format("woff2"),
+		url("../fonts/opensansbold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
