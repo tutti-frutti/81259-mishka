@@ -2,13 +2,16 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
+
   </head>
   <body>
 
     <header class="page-header container">
         <div class="page-header__logo">
-            <img src="img/logo.pmg" alt="mishka-logo">
+            <img src="img/logo-mobile.svg" alt="mishka-logo">
         </div>
         <nav class="main-nav">
             <button class="main-nav__toogle"></button>
@@ -22,15 +25,24 @@
     </header>
 
     <main>
-        <article class="product-category container">
+        <article class="product-category">
+           
             <div class="product-category__showcase">
-                <p class="product-category__showcase-text">Милые штуки ручной работы для дома</p>
+                <p class="product-category__showcase-text container">Милые штуки ручной работы для дома</p>
             </div>
             <div class="product-category__interior">
+                <!--Контейнер для ссылки-->
+                <div class="container"> 
                 <a href="#" class="product-category__link">Предметы интерьера</a>
+                </div>
+                <!--Контейнер для ссылки-->
             </div>
             <div class="product-category__toys">
+              <!--Контейнер для ссылки-->
+               <div class="container">
                 <a href="#" class="product-category__link">Детские игрушки</a>
+                </div>
+                <!--Контейнер для ссылки-->
             </div>
         </article>
 
@@ -53,10 +65,10 @@
                 </tr>
             </table>
             <div class="week-product__foto">
-                <img src="" alt="">
+                <img src="img/triple-set-mobile@1x.jpg" alt="week-product">
             </div>
             <div class="week-product__price">Цена 990 руб.</div>
-            <a class="week-product__btn-order" type="button">Заказать</a>
+            <a href="#" class="week-product__btn-order btn-general">Заказать</a>
         </article>
 
         <div class="page-divider"></div>
@@ -105,7 +117,7 @@
             <div class="reviews__author">Анастасия Красильникова</div>
             <div class="reviews__author-web-name">@misssssis</div>
             </div>
-            <a class="btn-reviews__write">Написать</a>
+            <a href="#" class="btn-reviews__write btn-general">Написать</a>
         </article>
 
         <div class="page-divider"></div>
@@ -123,22 +135,25 @@
         </article>
 
         <article class="inter-map">
-            <iframe src="" frameborder="0"></iframe>
+            <img src="img/map-mobile@1x.jpg">
+<!--            <iframe src="" frameborder="0"></iframe>-->
+            <div class="container">
             <a class="btn-general inter-map__btn-write-us">Напишите нам</a>
+            </div>
         </article>
     </main>
 
-    <footer class="container">
+    <footer class="">
         <section class="social-links">
-            <ul class="social-links__list">
-                <li class="social-links__inst"></li>
-                <li class="social-links__fb"></li>
-                <li class="social-links__tw"></li>
+            <ul class="social-links__list container">
+                <li class="social-links__inst">inst</li>
+                <li class="social-links__fb">fb</li>
+                <li class="social-links__tw">tw</li>
             </ul>
         </section>
 
         <section class="develop-company">
-            <div class="develop-company__name">Разработано</div>
+            <div class="develop-company__name container">Разработано</div>
         </section>
     </footer>
 
