@@ -1,3 +1,6 @@
+.about-us {
+  @include container;
+}
 .title-for-sections {
   @include verdana-bold(24px, 30px);
 }

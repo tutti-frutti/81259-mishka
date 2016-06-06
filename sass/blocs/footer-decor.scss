@@ -1,14 +1,22 @@
 .footer-decor {
   background: $footer-color;
+  @include container;
 }
 
-
+.logo-in-footer {
+  display: none;
+//блок всё-равно отображается
+}
 
 @media #{$tablet} {
+  .logo-in-footer {
+    display: block;
+  }
   .logo-in-footer,
   .social-links,
   .develop-company {
     display: inline-block;
+//  не срабатывает inline-block или float: left;
   }
 }
 

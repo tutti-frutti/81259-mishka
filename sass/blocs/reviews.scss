@@ -1,3 +1,7 @@
+.reviews {
+  @include container;
+}
+
 .reviews__text {
     @include open-sans-normal(14px, 30px);
 }

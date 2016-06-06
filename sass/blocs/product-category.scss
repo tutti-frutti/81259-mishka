@@ -38,9 +38,10 @@
   text-decoration: underline;
 }
 
+
+
 @media #{$tablet} {
   .product-category {
-
    background-size: cover;
   }
 
@@ -53,7 +54,7 @@
   .product-category__interior,
   .product-category__toys {
     float: left;
-    width: 320px;
+    width: 334px;
   }
 
   .product-category__link {
@@ -64,6 +65,21 @@
 
 }
 
-@media #{$desktop} {
 
+
+@media #{$desktop} {
+  .product-category {
+    min-height: 734px;
+    background: url("/img/hero-desktop@1x.jpg") no-repeat 50% 0;
+  }
+
+  .product-category__showcase-text {
+    @include verdana-bold(50px, 57px);
+    padding: 160px 95px 355px 95px;
+  }
+
+  .product-category__interior,
+  .product-category__toys {
+    width: 525px;
+  }
 }

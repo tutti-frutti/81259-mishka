@@ -1,3 +1,6 @@
+.contacts {
+  @include container;
+}
 .contacts__e-contacts, .contacts__real-contacts {
     @include open-sans-normal(14px, 30px);
     color: #505050;

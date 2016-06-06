@@ -1,9 +1,14 @@
+   .inter-map img {
+   width: 100%;
+  }
+
 @media #{$tablet} {
     .inter-map img {
     width: 100%;
   }
 
   .inter-map__btn-write-us {
+    @include container;
     display: block;
     margin: 50px auto;
   }
