@@ -1,4 +1,35 @@
+.page-header {
+ @include container;
+ height: 90px;
+ background: grey;
+}
+
 .page-header__logo {
+  @include clearfix;
   display: flex;
   justify-content: center;
+  height: 50px;
+  background: url("/img/logo-mobile.svg") no-repeat 50% 0;
+}
+
+
+
+@media #{$tablet} {
+ .page-header__logo {
+  float: left;
+  margin: 20px 0;
+  width: 115px;
+  height: 50px;
+  background: url("/img/mishka-tablet.png") no-repeat 50% 50%;
+  }
+}
+
+@media #{$desktop} {
+ .page-header__logo {
+//  float: left;
+  margin: 10px auto;
+  width: 115px;
+  height: 75px;
+  background: url("/img/mishka-desktop.png") no-repeat 50% 50%;
+  }
 }

@@ -1,0 +1,15 @@
+@media #{$tablet} {
+    .inter-map img {
+    width: 100%;
+  }
+
+  .inter-map__btn-write-us {
+    display: block;
+    margin: 50px auto;
+  }
+
+}
+
+@media #{$desktop} {
+
+}

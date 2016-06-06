@@ -4,27 +4,15 @@
 
 .product__item-title {
   padding-left: 25px;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Verdana", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include verdana-bold(16px, 24px);
 }
 
 .product__item-descr {
   padding-left: 25px;
-  font-size: 14px;
-  line-height: 30px;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-weight: normal;
-  font-style: normal;
+  @include open-sans-normal(14px, 30px);
 }
 
 .product__item-price {
   padding-left: 25px;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Verdana", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include verdana-bold(16px, 24px);
 }

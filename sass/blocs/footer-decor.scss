@@ -1,0 +1,17 @@
+.footer-decor {
+  background: $footer-color;
+}
+
+
+
+@media #{$tablet} {
+  .logo-in-footer,
+  .social-links,
+  .develop-company {
+    display: inline-block;
+  }
+}
+
+@media #{$desktop} {
+
+}

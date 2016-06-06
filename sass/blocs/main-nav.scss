@@ -1,13 +1,49 @@
+.main-nav {
+  @include container;
+}
 .main-nav__item {
   padding: 30px 0 30px 45px;
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Verdana", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include verdana-bold(16px, 24px);
+
 }
 
 .main-nav__item a {
   text-decoration: none;
   color: #000;
+}
+
+@media #{$tablet} {
+
+  .main-nav__items {
+    position: relative;
+    float: left;
+    top: -15px;
+    left: -45px;
+  }
+
+  .main-nav__service {
+    position: relative;
+    float: right;
+    top: -175px;
+    right: 0;
+  }
+
+  .main-nav__service li,
+  .main-nav__items li
+  {
+    display: inline-block;
+  }
+
+  .main-nav__toogle {
+    display: none;
+  }
+
+  .main-nav__item--hidden-media {
+    font-size: 0;
+  }
+
+}
+
+@media #{$desktop} {
+
 }

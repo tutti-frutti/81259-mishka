@@ -7,9 +7,5 @@
 }
 
 .promo-general {
-  font-size: 24px;
-  line-height: 30px;
-  font-family: "Verdana", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include verdana-bold(24px, 30px);
 }

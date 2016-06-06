@@ -1,8 +1,53 @@
-//@mixin verdanabold($font-family: "Verdana", "Arial", sans-serif;
-//                    $font-weight: bold;
-//                    $font-style: normal) {
-//      font-family: $font-family;
-//      font-weight: $font-weight;
-//      font-style: $font-style;
-//    }
-//    
+@mixin verdana-bold($font-size, $line-height) {
+      font-family: "Verdana", "Arial", "sans-serif";
+      font-weight: bold;
+      font-style: normal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+@mixin open-sans-bold($font-size, $line-height) {
+      font-family: "Open Sans", "Arial", "sans-serif";
+      font-weight: bold;
+      font-style: normal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+@mixin open-sans-normal($font-size, $line-height) {
+      font-family: "Open Sans", "Arial", "sans-serif";
+      font-weight: normal;
+      font-style: normal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+@mixin tahoma-bold($font-size, $line-height) {
+      font-family: "Open Sans", "Arial", "sans-serif";
+      font-weight: bold;
+      font-style: normal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
+@mixin container() {
+      width: 320px;
+      margin: 0 auto;
+
+
+  @media #{$tablet} {
+      width: 640px;
+  }
+
+  @media #{$desktop} {
+      width: 960px;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
