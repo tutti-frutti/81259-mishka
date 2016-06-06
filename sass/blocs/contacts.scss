@@ -1,11 +1,39 @@
+.contacts {
+  @include container;
+}
 .contacts__e-contacts, .contacts__real-contacts {
-    font-size: 14px;
-    line-height: 30px;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-weight: normal;
-	font-style: normal;
+    @include open-sans-normal(14px, 30px);
+    color: #505050;
+}
+
+.develop-company__name {
+  @include verdana-bold(18px, 18px);
 }
 
 .inter-map__btn-write-us {
     margin: 35px 0;
+}
+
+
+@media #{$tablet} {
+  .contacts {
+    @include clearfix;
+  }
+
+  .contacts__e-contacts {
+    float: left;
+    width: 290px;
+  }
+
+  .contacts__real-contacts {
+    float: right;
+    width: 290px;
+  }
+
+
+
+}
+
+@media #{$desktop} {
+
 }

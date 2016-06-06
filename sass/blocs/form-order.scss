@@ -1,0 +1,20 @@
+.form-order__section-title {
+  @include open-sans-bold(16px, 16px);
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+
+input[type="radio"] + label {
+  padding: 30px 0;
+  @include verdana-bold(16px, 18px);
+}
+
+input[type="checkbox"] + label {
+  padding: 30px 0;
+  @include verdana-bold(16px, 18px);
+}
+
+input[type="text"] + label {
+  padding: 30px 0;
+  @include verdana-bold(16px, 18px);
+}

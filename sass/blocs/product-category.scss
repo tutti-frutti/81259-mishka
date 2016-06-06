@@ -1,15 +1,15 @@
 .product-category {
-  max-height: 475px;
+  @include container;
+  @include clearfix;
+  max-height: 505px;
   background: url("/img/hero-mobile@1x.jpg") no-repeat 50% 0;
+  background-size: cover;
 }
 
 .product-category__showcase-text {
-  padding: 90px 15px 125px 15px;
-  font-size: 24px;
-  line-height: 30px;
-  font-family: "Verdana", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include verdana-bold(24px, 30px);
+  margin: 0;
+  padding: 90px 15px 205px 15px;
   text-align: center;
 }
 
@@ -21,6 +21,7 @@
 }
 
 .product-category__toys {
+
   display: flex;
   align-items: center;
   height: 105px;
@@ -29,12 +30,56 @@
 
 .product-category__link {
   text-decoration: none;
-  font-family: "Tahoma", "Arial", sans-serif;
-  font-weight: bold;
-  font-style: normal;
+  @include tahoma-bold(18px, 24px);
   color: #fff;
 }
 
 .product-category__link:hover {
   text-decoration: underline;
+}
+
+
+
+@media #{$tablet} {
+  .product-category {
+   background-size: cover;
+  }
+
+  .product-category__showcase-text {
+    @include verdana-bold(40px, 50px);
+    text-align: center;
+//  почему не получается отцентровать текст?
+  }
+
+  .product-category__interior,
+  .product-category__toys {
+    float: left;
+    width: 334px;
+  }
+
+  .product-category__link {
+    @include tahoma-bold(20px, 30px);
+    padding-left: 35px;
+    display: block;
+  }
+
+}
+
+
+
+@media #{$desktop} {
+  .product-category {
+    min-height: 734px;
+    background: url("/img/hero-desktop@1x.jpg") no-repeat 50% 0;
+  }
+
+  .product-category__showcase-text {
+    @include verdana-bold(50px, 57px);
+    padding: 160px 95px 355px 95px;
+  }
+
+  .product-category__interior,
+  .product-category__toys {
+    width: 525px;
+  }
 }

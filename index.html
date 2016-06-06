@@ -9,46 +9,58 @@
   </head>
   <body>
 
-    <header class="page-header container">
+    <header class="page-header">
         <div class="page-header__logo">
-            <img src="img/logo-mobile.svg" alt="mishka-logo">
+<!--            <img src="img/logo-mobile.svg" alt="mishka-logo">-->
         </div>
+        </header>
         <nav class="main-nav">
             <button class="main-nav__toogle"></button>
             <ul class="main-nav__items">
                 <li class="main-nav__item"><a href="">Каталог товаров</a></li>
                 <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
-                <li class="main-nav__item"><a href="">Поиск по сайту</a></li>
+                </ul>
+            <ul class="main-nav__service">
+                <li class="main-nav__item--hidden-media"><a href="">Поиск по сайту</a></li>
                 <li class="main-nav__item"><a href="">Корзина: пока пуста</a></li>
+          </ul>
+            <ul class="main-nav__new-sell-out">
+              <li class="main-nav__item"><a href="#">Новые поступления</a></li>
+              <li class="main-nav__item"><a href="#">Распродажа</a></li>
+            </ul>
+            <ul class="main-nav__free-delivery">
+              <li class="main-nav__item--grey">Бесплатная доставка по миру</li>
             </ul>
         </nav>
-    </header>
+
 
     <main>
         <article class="product-category">
-           
             <div class="product-category__showcase">
-                <p class="product-category__showcase-text container">Милые штуки ручной работы для дома</p>
+                <p class="product-category__showcase-text">Милые штуки ручной работы для дома</p>
             </div>
             <div class="product-category__interior">
                 <!--Контейнер для ссылки-->
-                <div class="container"> 
-                <a href="#" class="product-category__link">Предметы интерьера</a>
+                <div class="container">
+                <a href="#" class="product-category__link">Предметы<br> интерьера</a>
                 </div>
                 <!--Контейнер для ссылки-->
             </div>
             <div class="product-category__toys">
               <!--Контейнер для ссылки-->
                <div class="container">
-                <a href="#" class="product-category__link">Детские игрушки</a>
+                <a href="#" class="product-category__link">Детские<br>игрушки</a>
                 </div>
                 <!--Контейнер для ссылки-->
             </div>
         </article>
 
-        <article class="week-product container">
+        <article class="week-product">
+           <div class="week-product__header">
             <h3 class="week-product__tittle">Вязаные корзинки</h3>
             <p class="week-product__overall-text">Товар недели</p>
+            </div>
+            <div class="week-product__wrapper">
             <div class="week-product__descr">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</div>
             <table class="week-product__options">
                 <tr>
@@ -64,34 +76,40 @@
                     <td class="week-product__options-meaning">15 см</td>
                 </tr>
             </table>
-            <div class="week-product__foto">
-                <img src="img/triple-set-mobile@1x.jpg" alt="week-product">
             </div>
+            <div class="week-product__foto"></div>
             <div class="week-product__price">Цена 990 руб.</div>
             <a href="#" class="week-product__btn-order btn-general">Заказать</a>
         </article>
 
         <div class="page-divider"></div>
 
-        <article class="about-us container">
+        <article class="about-us">
             <h3 class="about-us__title title-for-sections">Коротко о нас:</h3>
+            <div class="about-us__columns">
+            <div class="about-us__left-column">
             <div class="about-us__wrapper">
                 <div class="about-us__icon">
                     <img src="" alt="">
                 </div>
                 <div class="about-us__descr">Экологически чистые материалы</div>
             </div>
-            <div class="about-us__wrapper">
+            <div class="<about-us__wrapper">
                 <div class="about-us__icon">
                     <img src="" alt="">
                 </div>
                 <div class="about-us__descr">Скандинаский стиль по российской цене</div>
-            </div><div class="about-us__wrapper">
+            </div>
+            <div class="about-us__wrapper">
                 <div class="about-us__icon">
                     <img src="" alt="">
                 </div>
                 <div class="about-us__descr">Увеличивает лайки на фотографиях</div>
-            </div><div class="about-us__wrapper">
+            </div>
+            </div>
+
+          <div class="about-us__right-column">
+          <div class="about-us__wrapper">
                 <div class="about-us__icon">
                     <img src="" alt="">
                 </div>
@@ -107,11 +125,13 @@
                 </div>
                 <div class="about-us__descr">Поставляются в подарочной упаковке</div>
             </div>
+            </div>
+            </div>
         </article>
 
-        <article class="reviews slider container">
+        <article class="reviews slider">
             <h3 class="reviews__title title-for-sections">Отзывы</h3>
-            <input class="slider__input-prev" type="radio" id="">
+<!--            <input class="slider__input-prev" type="radio" id="">-->
             <div class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</div>
             <div class="reviews__comments">
             <div class="reviews__author">Анастасия Красильникова</div>
@@ -122,7 +142,7 @@
 
         <div class="page-divider"></div>
 
-        <article class="contacts container">
+        <article class="contacts">
             <h3 class="contacts__title title-for-sections">Контакты</h3>
             <div class="contacts__e-contacts">
             <div class="contacts__adresses">e-mail:</div>
@@ -135,15 +155,19 @@
         </article>
 
         <article class="inter-map">
-            <img src="img/map-mobile@1x.jpg">
+            <img src="img/map-desktop.jpg">
 <!--            <iframe src="" frameborder="0"></iframe>-->
             <div class="container">
-            <a class="btn-general inter-map__btn-write-us">Напишите нам</a>
+            <a href="#" class="btn-general inter-map__btn-write-us">Напишите нам</a>
             </div>
         </article>
     </main>
 
-    <footer class="">
+    <footer class="footer-decor">
+        <section class="logo-in-footer">
+          <img src="img/logo-mobile.svg" alt="Mishka">
+        </section>
+
         <section class="social-links">
             <ul class="social-links__list container">
                 <li class="social-links__inst">inst</li>

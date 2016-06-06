@@ -1,3 +1,7 @@
 .social-links {
-//    background-color: $footer-color;
+  background-color: $footer-color;
+}
+
+ul.social-links__list li {
+  display: inline-block;
 }
