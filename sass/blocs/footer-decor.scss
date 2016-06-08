@@ -1,11 +1,17 @@
 .footer-decor {
   background: $footer-color;
+}
+
+.social-links,
+.develop-company__name {
   @include container;
+  display: flex;
+  align-items: center;
+  height: 80px;
 }
 
 .logo-in-footer {
   display: none;
-//блок всё-равно отображается
 }
 
 @media #{$tablet} {

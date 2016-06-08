@@ -31,8 +31,11 @@
     }
 
 @mixin container() {
-      width: 320px;
+      width: 260px;
       margin: 0 auto;
+      padding-left: 30px;
+      padding-right: 30px;
+//      background-color: floralwhite;
 
 
   @media #{$tablet} {

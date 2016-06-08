@@ -1,9 +1,11 @@
 .main-nav {
   @include container;
+//  min-height: 50px;
 }
 .main-nav__item {
-  padding: 30px 0 30px 45px;
   @include verdana-bold(16px, 24px);
+  padding: 28px 0 28px 45px;
+  box-shadow: 0 1px 0 0 #ececec;
 }
 
 .main-nav__new-sell-out {
@@ -23,18 +25,29 @@
 
 @media #{$tablet} {
 
+  .page-header-main-nav {
+    display: flex;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .main-nav__items {
-    position: relative;
-    float: left;
-    top: -15px;
-    left: -45px;
+
+//    position: relative;
+//    float: left;
+//    top: -15px;
+//    left: -45px;
+    box-shadow: 0 0 0 0;
   }
 
   .main-nav__service {
-    position: relative;
-    float: right;
-    top: -175px;
-    right: 0;
+//    position: relative;
+//    float: right;
+//    top: -175px;
+//    right: 0;
   }
 
   .main-nav__service li,

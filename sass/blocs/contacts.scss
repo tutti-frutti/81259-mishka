@@ -1,9 +1,40 @@
 .contacts {
   @include container;
+  position: relative;
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 319px;
+    height: 6px;
+    background-image: url("/img/zizzag-mobile.png");
+    background-repeat: no-repeat;
+  }
 }
-.contacts__e-contacts, .contacts__real-contacts {
+.contacts__e-contacts,
+.contacts__real-contacts {
     @include open-sans-normal(14px, 30px);
-    color: #505050;
+    color: #444444;
+}
+
+.contacts__e-contacts,
+.contacts__real-contacts {
+  display: flex;
+}
+
+.contacts__adresses {
+  padding-right: 30px;
+}
+
+.contacts__destination-email {
+  color: #444444;
+}
+
+.contacts__adresses, .contacts__destination {
+
 }
 
 .develop-company__name {

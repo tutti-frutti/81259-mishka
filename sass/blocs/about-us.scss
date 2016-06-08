@@ -1,5 +1,19 @@
 .about-us {
   @include container;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 319px;
+    height: 6px;
+    background-image: url("/img/zizzag-mobile.png");
+    background-repeat: no-repeat;
+  }
 }
 .title-for-sections {
   @include verdana-bold(24px, 30px);

@@ -1,27 +1,35 @@
 .page-header {
- @include container;
-  position: relative;
- height: 90px;
-// background: grey;
+  @include container;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+// нужно ли оставлять высоту?
+
 }
 
 .page-header__logo {
-  @include clearfix;
-  display: flex;
-  justify-content: center;
-  height: 50px;
+//  margin: auto;
+  width: 90px;
+  height: 35px;
   background: url("/img/logo-mobile.svg") no-repeat 50% 0;
 }
 
 
 
 @media #{$tablet} {
+  .page-header {
+  justify-content: flex-start;
+
+  }
+
  .page-header__logo {
-  float: left;
-  margin: 20px 0;
+//  float: left;
+//  margin: 20px 0;
+
   width: 115px;
   height: 50px;
-  background: url("/img/mishka-tablet.png") no-repeat 50% 50%;
+  background: url("/img/mishka-tablet.png") no-repeat 0% 50%;
   }
 }
 
