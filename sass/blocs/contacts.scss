@@ -45,26 +45,32 @@
     margin: 35px 0;
 }
 
+//MEDIA TABLET
 
 @media #{$tablet} {
   .contacts {
     @include clearfix;
   }
 
+  .contacts__body {
+    display: flex;
+  }
+
   .contacts__e-contacts {
-    float: left;
+    margin-right: 30px;
     width: 290px;
   }
 
   .contacts__real-contacts {
-    float: right;
     width: 290px;
   }
-
-
-
 }
 
+
+//MEDIA DESKTOP
+
 @media #{$desktop} {
+
+
 
 }

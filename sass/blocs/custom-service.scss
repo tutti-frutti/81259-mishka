@@ -1,4 +1,6 @@
 .custom-service {
-  margin: 30px 0;
-  @include open-sans-normal(14px, 25px)
+  @include container;
+  @include open-sans-normal(14px, 25px);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }

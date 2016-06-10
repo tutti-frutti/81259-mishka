@@ -7,18 +7,17 @@
 }
 
 @media #{$tablet} {
-    .inter-map img {
-    width: 100%;
+    .inter-map {
   }
 
-  .inter-map__btn-write-us {
+  .inter-map__button {
     @include container;
-    display: block;
-//    margin: 50px auto;
+    display: flex;
+    justify-content: center;
   }
 
 }
 
 @media #{$desktop} {
 
-}
+  }

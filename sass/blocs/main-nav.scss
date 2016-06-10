@@ -1,17 +1,21 @@
-.main-nav {
+.nav-wrapper {
   @include container;
-//  min-height: 50px;
+  display: flex;
+  flex-direction: column;
 }
+
+.page-header__logo {
+  order: -2;
+  justify-content: space-around;
+}
+
 .main-nav__item {
   @include verdana-bold(16px, 24px);
   padding: 28px 0 28px 45px;
   box-shadow: 0 1px 0 0 #ececec;
 }
 
-.main-nav__new-sell-out {
-  display: none;
-}
-
+.main-nav__new-sell-out,
 .main-nav__free-delivery {
   display: none;
 }
@@ -25,29 +29,33 @@
 
 @media #{$tablet} {
 
-  .page-header-main-nav {
-    display: flex;
-  }
-
-  .main-nav {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .main-nav__items {
-
-//    position: relative;
-//    float: left;
-//    top: -15px;
-//    left: -45px;
-    box-shadow: 0 0 0 0;
+  .nav-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .main-nav__service {
-//    position: relative;
-//    float: right;
-//    top: -175px;
-//    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 320px;
+    order: -1;
+  }
+
+  .hidden-media {
+    font-size: 0;
+  }
+
+  .main-nav__free-delivery {
+    align-self: center;
+  }
+
+  .main-nav__items li:first-child {
+    padding-left: 0;
+  }
+
+.main-nav__item {
+  @include verdana-bold(14px, 24px);
   }
 
   .main-nav__service li,
@@ -61,11 +69,8 @@
     display: none;
   }
 
-  .main-nav__item--hidden-media {
-    font-size: 0;
-  }
-
   .main-nav__free-delivery {
+    @include verdana-normal(14px, 24px);
     display: block;
   }
 
@@ -74,32 +79,29 @@
 
 
 @media #{$desktop} {
-  .main-nav__items {
-    position: relative;
-    float: left;
-    top: -85px;
-    left: -45px;
+
+  .nav-wrapper {
+    justify-content: space-between;
   }
 
-  .main-nav__service {
-    position: relative;
-    float: right;
-    top: -82px;
-    right: 0;
+  .main-nav {
+    order: -3;
+  }
+  .hidden-media {
+    font-size: 0;
   }
 
   .main-nav__new-sell-out {
     display: block;
-    position: absolute;
-    left: 105px;
-    top: 80px;
-//  относительно чего позиционируется?
   }
 
-  .main-nav__free-delivery {
-    position: absolute;
-    top: 0;
-    right: 0;
-//  почему не позиционируется относительно блоков с relative?
+  .main-nav__new-sell-out li:first-child {
+    padding-left: 0;
+  }
+
+  .page-header__logo {
+  width: 155px;
+  height: 75px;
+  background: url("/img/mishka-desktop.png") no-repeat 50% 50%;
   }
 }

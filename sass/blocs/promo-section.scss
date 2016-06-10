@@ -2,10 +2,23 @@
   display: flex;
   align-items: center;
   height: 175px;
-  text-align: center;
+//  text-align: center;
   background-color: #f1f1f1;
 }
 
 .promo-general {
+  @include container;
   @include verdana-bold(24px, 30px);
+}
+
+
+
+@media #{$tablet} {
+
+
+
+}
+
+@media #{$desktop} {
+
 }

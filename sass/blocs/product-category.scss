@@ -78,19 +78,45 @@
 
 @media #{$tablet} {
   .product-category {
-   background-size: cover;
+   position: relative;
+   flex-direction: column;
+   background: url("/img/hero-desktop@1x.jpg") no-repeat 50% 0;
+   background-size: contain;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 770px;
+      height: 24px;
+      bottom: -12px;
+      left: 48px;
+      background-image: url("/img/zizzag-desktop.png");
+      background-repeat: no-repeat;
+      z-index: 1;
+    }
   }
 
   .product-category__showcase-text {
     @include verdana-bold(40px, 50px);
     text-align: center;
-//  почему не получается отцентровать текст?
   }
 
-  .product-category__interior,
+  .product-category__wrapper {
+    @include container;
+    display: flex;
+    flex-direction: row;
+//  для того, чтобы "развернуть" блоки использовал дополнительную обертку для них. или можно было обойтись без неё?
+  }
+
+
+
+  .product-category__interior {
+    flex-grow: 1;
+//  почему не срабатывает flex-grow?
+  }
+
   .product-category__toys {
-    float: left;
-    width: 334px;
+    flex-grow: 0;
   }
 
   .product-category__link {

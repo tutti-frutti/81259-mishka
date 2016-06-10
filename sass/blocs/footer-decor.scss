@@ -2,10 +2,14 @@
   background: $footer-color;
 }
 
-.social-links,
-.develop-company__name {
+.footer-decor__wrapper {
   @include container;
+}
+
+.social-links,
+.develop-company {
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 80px;
 }
@@ -15,16 +19,21 @@
 }
 
 @media #{$tablet} {
+.footer-decor__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+}
+
   .logo-in-footer {
     display: block;
   }
-  .logo-in-footer,
-  .social-links,
-  .develop-company {
-    display: inline-block;
+//  .logo-in-footer,
+//  .social-links,
+//  .develop-company {
+//    display: inline-block;
 //  не срабатывает inline-block или float: left;
-  }
-}
 
 @media #{$desktop} {
 

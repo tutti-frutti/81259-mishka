@@ -2,25 +2,39 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
 
-    <header class="page-header container">
-        <div class="page-header__logo">
-            <img src="img/logo-mobile.svg" alt="mishka-logo">
-        </div>
+    <header class="page-header">
+
+    </header>
+
+        <div class="nav-wrapper">
         <nav class="main-nav">
             <button class="main-nav__toogle"></button>
             <ul class="main-nav__items">
                 <li class="main-nav__item"><a href="">Каталог товаров</a></li>
                 <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
-                <li class="main-nav__item"><a href="">Поиск по сайту</a></li>
+                </ul>
+        </nav>
+            <ul class="main-nav__service">
+                <li class="main-nav__item hidden-media"><a href="">Поиск по сайту</a></li>
                 <li class="main-nav__item"><a href="">Корзина: пока пуста</a></li>
             </ul>
-        </nav>
-    </header>
+
+            <div class="page-header__logo"></div>
+
+            <ul class="main-nav__new-sell-out">
+              <li class="main-nav__item"><a href="#">Новые поступления</a></li>
+              <li class="main-nav__item"><a href="#">Распродажа</a></li>
+            </ul>
+            <ul class="main-nav__free-delivery">
+              <li class="main-nav__item--grey">Бесплатная доставка по миру</li>
+            </ul>
+            </div>
 
     <main class="container">
 
@@ -36,53 +50,102 @@
 
                 <div class="form-order__radio-buttons-wrapper">
                 <span class="form-order__section-title">Тип</span><br>
+                <div class="radio-wrapper">
                 <input type="radio" id="interior" name="type" value="interior">
                 <label for="interior">Аксессуар для интерьера</label><br>
                 <input type="radio" id="toys" name="type" value="toys">
                 <label for="toys">Детская игрушка</label>
-                </div><br>
+                </div>
+                </div>
+                <br>
 
+                <div class="form-order__fio-wrapper--fluid-bg">
                 <div class="form-order__checkboxes-wrapper">
-                <span class="form-order__section-title">Цвет</span><br>
-                <input type="checkbox" id="white" name="white" class="form-order__colors">
-                <label for="white">Белый</label><br>
-                <input type="checkbox" id="gray" name="gray" class="form-order__colors">
-                <label for="gray">Серый</label><br>
-                <input type="checkbox" id="tiffany" name="tiffany" class="form-order__colors">
-                <label for="tiffany">«Тиффани»</label><br>
-                <input type="checkbox" id="black" name="black" class="form-order__colors">
-                <label for="black">Черный</label><br>
-                <input type="checkbox" id="pink" name="pink" class="form-order__colors">
-                <label for="pink">Розовый</label><br>
-                <input type="checkbox" id="orange" name="orange" class="form-order__colors">
-                <label for="orange">Оранжевый</label><br>
+                
+                <span class="form-order__section-title">Цвет</span>
+                
+                <table class="form-order__checkboxes-table">
+                
+                <tr>
+                    <td><input type="checkbox" id="white" name="white" class="form-order__colors">
+                <label for="white">Белый</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="gray" name="gray" class="form-order__colors">
+                <label for="gray">Серый</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="tiffany" name="tiffany" class="form-order__colors">
+                <label for="tiffany">«Тиффани»</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="black" name="black" class="form-order__colors">
+                <label for="black">Черный</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="pink" name="pink" class="form-order__colors">
+                <label for="pink">Розовый</label></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" id="orange" name="orange" class="form-order__colors">
+                <label for="orange">Оранжевый</label></td>
+                </tr>
+                </table>
+                </div>
                 </div>
 
-                <div class="form-order__fio-wrapper">
+                <div class="form-order__fio-wrapper-1">
                 <span class="form-order__section-title">ФИО</span><br>
+                
+                <div class="form-order__fio-person">
                 <label for="user-surname">Фамилия:</label>
-                <input id="user-surname" type="text" name="surname" class="form-order__fio" placeholder="Укажите фамилию"><br>
-                <label for="user-name">Имя:</label><br>
+                <input id="user-surname" type="text" name="surname" class="form-order__fio" placeholder="Укажите фамилию">
+                </div>
+                <div class="form-order__fio-person">
+                <label for="user-name">Имя:</label>
                 <input id="user-name" type="text" name="name" class="form-order__fio" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-order__fio-person">
                 <label for="user-fathername">Отчество</label>
-                <input id="user-fathername" type="text" name="name" class="form-order__fio" placeholder="Отчество, если желаете"><br>
-                <span class="form-order__section-title">Тел</span><br>
-                <input type="tel" class="form-order__tel" placeholder="+7 XXX XX XX"><br>
-                <span class="form-order__section-title">e-mail</span><br>
-                <input type="email" class="form-order__email" placeholder="Ваш e-mail">
+                <input id="user-fathername" type="text" name="name" class="form-order__fio" placeholder="Отчество, если желаете">
+                </div>
+              </div>
+
+                <div class="form-order__fio-wrapper--fluid-bg">
+                <div class="form-order__fio-wrapper-2">
+                
+                <div class="form-order__contacts">
+                <label for="user-phone" class="form-order__section-title">Тел</label>
+                <input type="tel" id="user-phone" class="form-order__tel" placeholder="+7 XXX XX XX">
+                </div>
+                
+                <div class="form-order__contacts">
+                <label for="user-mail" class="form-order__section-title">e-mail</label>
+                <input type="email" id="user-mail" class="form-order__email" placeholder="Ваш e-mail">
+                </div>
+                </div>
                 </div>
 
-                <span class="form-order__section-title">Доп</span><br>
-                <textarea rows="" cols="" class="form-order__user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <div class="form-order__fio-wrapper-3">
+                <div class="form-order__message">
+                <label for="user-message" class="form-order__section-title">Доп</label>
+                <textarea id="user-message" rows="5" cols="" class="form-order__user-message" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
                 <button type="submit" class="btn-general">Отправить заказ</button>
+              </div>
             </form>
         </article>
 
     </main>
 
-    <footer class="container">
+  <footer class="footer-decor">
+       <div class="footer-decor__wrapper">
+        <section class="logo-in-footer">
+          <img src="img/logo-mobile.svg" alt="Mishka">
+        </section>
+
         <section class="social-links">
-            <ul class="social-links__list">
+            <ul class="social-links__list container">
                 <li class="social-links__inst">inst</li>
                 <li class="social-links__fb">fb</li>
                 <li class="social-links__tw">tw</li>
@@ -90,8 +153,9 @@
         </section>
 
         <section class="develop-company">
-            <div class="develop-company__name">Разработано</div>
+            <div class="develop-company__name container">Разработано</div>
         </section>
+        </div>
     </footer>
 
   </body>

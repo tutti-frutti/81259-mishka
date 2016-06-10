@@ -1,6 +1,5 @@
 .week-product {
   @include container;
-
 }
 
 .week-product__tittle {
@@ -56,25 +55,36 @@
 
 @media #{$tablet} {
   .week-product {
+    display: flex;
+    flex-direction: column;
     min-height: 451px;
   }
 
+
+  .week-product__tittle {
+    @include verdana-bold(40px, 50px);
+    margin-top: 5px;
+  }
+
   .week-product__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-top: 45px;
   }
 
-  .week-product__tittle {
-  @include verdana-bold(40px, 50px);
-  margin-top: 5px;
-  float: left;
+  .week-product__body {
+    display: flex;
   }
 
-  .week-product__overall-text {
-  float: right;
+  .week-product__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: -121px;
+    width: 259px;
   }
 
-  .week-product__wrapper {
-    float: left;
+    .week-product__wrapper {
     width: 290px;
     margin-right: 45px;
   }
@@ -89,7 +99,7 @@
   }
 
   .week-product__foto {
-    float: right;
+    margin-top: 0;
     width: 333px;
     height: 404px;
     background-color: floralwhite;
@@ -97,18 +107,36 @@
   }
 
   .week-product__price {
-    margin-top: 90px;
-    text-align: center;
-    //    не срабатывает marging-top и text-align
+    margin: auto;
+    padding-bottom: 15px;
   }
-
 }
 
 
 
 @media #{$desktop} {
+
+  .week-product__header {
+     justify-content: flex-start;
+  }
+
+  .week-product__body {
+    justify-content: flex-end;
+  }
+
+  .week-product__footer {
+    margin-left: 195px;
+  }
+
+  .week-product__tittle {
+    order: 1;
+  }
+
+  .week-product__overall-text {
+    margin-right: 30px;
+  }
+
   .week-product__foto {
-    float: right;
     width: 525px;
     height: 636px;
     background-color: floralwhite;
@@ -116,26 +144,21 @@
   }
 
   .week-product {
-    min-height: 685px;
+//    min-height: 685px;
   }
 
   .week-product__tittle {
   @include verdana-bold(50px, 57px);
-  position: relative;
-  top: 0;
-  right: 0;
-  float: right;
   margin-top: 5px;
   }
 
   .week-product__overall-text {
-  float: left;
   margin-left: 30px;
   }
 
   .week-product__descr {
     @include open-sans-normal(16px, 30px);
-    margin-top: 230px;
+    margin-top: 160px;
     margin-bottom: 50px;
   }
 

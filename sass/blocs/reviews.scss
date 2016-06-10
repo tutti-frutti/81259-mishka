@@ -27,12 +27,12 @@
 @media #{$tablet} {
   .reviews {
     position: relative;
-//  кнопка позиционируется ТОЛЬКО относительно .reviews, когда позиционирую относительно .reviews__title или .reviews__text улетает вверх
+    margin-top: 100px;
   }
 
-  .btn-reviews__write {
+  .reviews .btn-reviews__write {
     position: absolute;
-    top: -36px;
+    top: -26px;
     right: 0;
     width: 180px;
 //  как переопределить ширину кнопки без использования !important

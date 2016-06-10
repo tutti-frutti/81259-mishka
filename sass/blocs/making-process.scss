@@ -1,15 +1,21 @@
-.making-process__title {
-  display: block;
-  padding: 30px 0 30px 90px;
+.making-process {
+  @include container;
 }
 
 .making-process__title {
   @include verdana-bold(16px, 24px);
+  display: block;
+  padding: 30px 0 30px 90px;
 }
 
 .making-process__text {
   padding-left: 30px;
   @include open-sans-normal(14px, 24px);
+}
+
+.making-process__video img {
+  width: 260px;
+  height: 150px;
 }
 
 .making-process__btn-make-order {
@@ -26,4 +32,63 @@
   text-transform: uppercase;
   color: #444444;
   box-sizing: border-box;
+}
+
+@media #{$tablet} {
+
+  .making-process {
+    margin-top: 50px;
+  }
+
+  .making-process__wrapper {
+    margin-top: -4px;
+    margin-bottom: 60px;
+    border: 1px solid #ececec;
+  }
+
+  .making-process__text {
+    margin: 35px auto;
+    padding-left: 0;
+    width: 580px;
+  }
+
+  .making-process__video img {
+  width: 668px;
+  height: 455px;
+}
+
+  .making-process__btn-make-order {
+    width: 580px;
+  }
+
+}
+
+@media #{$desktop} {
+
+  .making-process {
+    display: flex;
+  }
+
+  .making-process__wrapper {
+    width: 370px;
+    height: 457px;
+//  можно ли задавать высоту блоку?
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .making-process__btn-make-order {
+    width: 230px;
+  }
+
+  .making-process__title {
+  padding-top: 100px;
+  padding-left: 0;
+}
+
+  .making-process__text {
+    width: 245px;
+  }
+
 }

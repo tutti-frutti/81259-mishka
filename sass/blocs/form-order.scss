@@ -1,3 +1,12 @@
+.form-order__radio-buttons-wrapper,
+.form-order__checkboxes-wrapper,
+.form-order__fio-wrapper-1,
+.form-order__fio-wrapper-2,
+.form-order__fio-wrapper-3{
+  @include container;
+//пришлось разделить форму на эти блоки, чтобы отдельным блокам задать тянущийся background
+}
+
 .form-order__section-title {
   @include open-sans-bold(16px, 16px);
   text-transform: uppercase;
@@ -17,4 +26,128 @@ input[type="checkbox"] + label {
 input[type="text"] + label {
   padding: 30px 0;
   @include verdana-bold(16px, 18px);
+}
+
+.form-order__checkboxes-table {
+    border-collapse: collapse;
+}
+
+.form-order__checkboxes-table td {
+    padding: 10px;
+    width: 180px;
+}
+
+.form-order__checkboxes-table {
+    display: block;
+}
+
+tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+tr {
+    margin: 10px;
+}
+
+td {
+    display: block;
+}
+
+.form-order__fio-person label {
+    margin-right: 30px;
+}
+
+.form-order__contacts label {
+    margin-right: 50px;
+}
+
+.form-order__message label {
+    margin-right: 50px;
+}
+
+
+
+@media #{$tablet} {
+.form-order__radio-buttons-wrapper {
+    display: flex;
+  }
+    
+.form-order__checkboxes-table {
+    margin-left: 180px;
+//  правильно ли отодвигать эти элементы через margin или есть другие варианты?
+    }
+
+.radio-wrapper {
+    margin-left: 167px;
+//  правильно ли использовать такие обертки для того чтобы распределить эл с помощью флексов?
+  }
+
+.form-order__fio-wrapper--fluid-bg {
+    background-color: #f1f1f1;
+  }
+    
+.form-order__fio-person {
+    display: flex;
+    margin: 10px 0 10px 180px;
+}
+
+.form-order__fio-person label {
+    display: table;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+.form-order__fio-person input {
+    flex-grow: 1;
+    }
+    
+.form-order__contacts {
+    display: flex;
+    margin: 10px 0;
+    }
+    
+.form-order__contacts label {
+    display: table;
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 120px;
+//  правильно ли отодвигать margin'ом?
+    }
+    
+.form-order__contacts input {
+        flex-grow: 1;
+    }
+    
+    .form-order__message {
+        display: flex;
+        margin: 10px 0;
+    }
+    
+    .form-order__message label {
+    display: table;
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 120px;
+    }
+    
+    .form-order__message textarea {
+        flex-grow: 1;
+    }
+    
+}
+
+@media #{$desktop} {
+ 
+.form-order__fio-person {
+    margin: 10px 175px 10px 180px;
+}
+.form-order__contacts {
+    margin: 10px 175px 10px 0;
+    }
+    
+    .form-order__message {
+        margin: 10px 175px 10px 0
+    }
 }

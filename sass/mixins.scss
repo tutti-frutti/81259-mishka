@@ -6,6 +6,14 @@
       line-height: $line-height;
     }
 
+@mixin verdana-normal($font-size, $line-height) {
+      font-family: "Verdana", "Arial", "sans-serif";
+      font-weight: normal;
+      font-style: normal;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
+
 @mixin open-sans-bold($font-size, $line-height) {
       font-family: "Open Sans", "Arial", "sans-serif";
       font-weight: bold;
@@ -33,9 +41,9 @@
 @mixin container() {
       width: 260px;
       margin: 0 auto;
-      padding-left: 30px;
-      padding-right: 30px;
-//      background-color: floralwhite;
+//      padding-left: 30px;
+//      padding-right: 30px;
+//      background-color: bisque;
 
 
   @media #{$tablet} {
@@ -44,6 +52,8 @@
 
   @media #{$desktop} {
       width: 1050px;
+//      padding-left: 50px;
+//      padding-right: 50px;
   }
 }
 

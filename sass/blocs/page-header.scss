@@ -3,13 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-// нужно ли оставлять высоту?
-
+//  height: 80px;
 }
 
 .page-header__logo {
-//  margin: auto;
   width: 90px;
   height: 35px;
   background: url("/img/logo-mobile.svg") no-repeat 50% 0;
@@ -20,29 +17,27 @@
 @media #{$tablet} {
   .page-header {
   justify-content: flex-start;
-
   }
 
  .page-header__logo {
-//  float: left;
-//  margin: 20px 0;
-
   width: 115px;
-  height: 50px;
+  height: 80px;
   background: url("/img/mishka-tablet.png") no-repeat 0% 50%;
   }
+
+
 }
 
 @media #{$desktop} {
  .page-header__logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: -75.2px;
+//  position: absolute;
+//  top: 0;
+//  left: 50%;
+//  margin-top: 10px;
+//  margin-bottom: 10px;
+//  margin-left: -75.2px;
   width: 155px;
   height: 75px;
-  background: url("/img/mishka-desktop.png") no-repeat 50% 50%;
+//  background: url("/img/mishka-desktop.png") no-repeat 50% 50%;
   }
 }
