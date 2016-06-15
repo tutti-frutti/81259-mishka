@@ -1,20 +1,31 @@
-   .inter-map img {
-   width: 100%;
+  .inter-map {
+   @include container;
+    min-height: 457px;
+    background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
   }
+
+  .inter-map__button {
+    @include container;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
 
 @media #{$tablet} {
-    .inter-map img {
-    width: 100%;
+    .inter-map {
   }
 
-  .inter-map__btn-write-us {
+  .inter-map__button {
     @include container;
-    display: block;
-    margin: 50px auto;
+    display: flex;
+    justify-content: center;
   }
 
 }
 
 @media #{$desktop} {
 
-}
+
+  }

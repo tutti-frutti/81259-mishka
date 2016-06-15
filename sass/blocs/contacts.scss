@@ -1,39 +1,114 @@
 .contacts {
   @include container;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 319px;
+    height: 6px;
+    background-image: url("/img/zizzag-mobile.png");
+    background-repeat: no-repeat;
+  }
 }
-.contacts__e-contacts, .contacts__real-contacts {
+
+.contacts__button {
+  order: 1;
+}
+.contacts__blocks {
     @include open-sans-normal(14px, 30px);
-    color: #505050;
+    color: #444444;
+}
+
+.contacts__blocks {
+  display: flex;
+}
+
+.contacts__adresses {
+  padding-right: 30px;
+}
+
+.contacts__destination-email {
+  color: #444444;
+}
+
+.contacts__adresses, .contacts__destination {
+
 }
 
 .develop-company__name {
   @include verdana-bold(18px, 18px);
 }
 
-.inter-map__btn-write-us {
+.contacts__btn-write-us {
     margin: 35px 0;
 }
 
+//MAP
+
+ .contacts__map {
+   @include container;
+    min-height: 457px;
+    background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
+  }
+
+  .contacts__btn-write-us {
+    @include container;
+}
+
+
+//MEDIA TABLET
 
 @media #{$tablet} {
   .contacts {
-    @include clearfix;
+    @include container;
   }
 
-  .contacts__e-contacts {
-    float: left;
+  .contacts__body {
+    display: flex;
+  }
+
+  .contacts__blocks {
+    margin-right: 30px;
     width: 290px;
   }
 
-  .contacts__real-contacts {
-    float: right;
+  .contacts__blocks {
     width: 290px;
   }
-
-
-
 }
 
+
+//MEDIA DESKTOP
+
 @media #{$desktop} {
+
+  .contacts {
+    flex-flow: row wrap;
+  }
+
+  .contacts__wrapper {
+    width: 350px;
+    margin-left: 175px;
+  }
+
+  .contacts__body {
+    flex-direction: column;
+  }
+
+  .contacts__map {
+    width: 525px;
+    background: url("/img/map-desktop.jpg") no-repeat center center;
+  }
+
+  .contacts__btn-write-us {
+    margin-top: -90px;
+    margin-left: 175px;
+  }
 
 }

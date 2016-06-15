@@ -1,5 +1,19 @@
 .about-us {
   @include container;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -30px;
+    left: 0;
+    width: 319px;
+    height: 6px;
+    background-image: url("/img/zizzag-mobile.png");
+    background-repeat: no-repeat;
+  }
 }
 .title-for-sections {
   @include verdana-bold(24px, 30px);
@@ -14,24 +28,30 @@
 
 @media #{$tablet} {
   .about-us__columns {
-    @include clearfix;
+    display: flex;
+    justify-content: space-between;
   }
 
   .about-us__descr {
     @include verdana-bold(20px, 22px);
-  }
-
-  .about-us__left-column {
-    width: 290px;
-    float: left;
-  }
-
-  .about-us__right-column {
-    width: 290px;
-    float: right;
+    padding: 50px 0;
+    width: 335px;
   }
 }
 
+
+
 @media #{$desktop} {
 
+  .about-us__columns {
+    justify-content: flex-start;
+  }
+
+  .about-us__title {
+    margin-left: 175px;
+  }
+  .about-us__left-column {
+    margin-left: 175px;
+    margin-right: 100px;
+  }
 }

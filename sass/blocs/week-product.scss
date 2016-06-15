@@ -1,56 +1,90 @@
 .week-product {
   @include container;
-
-}
-.week-product__header {
-  @include clearfix;
 }
 
 .week-product__tittle {
-    margin-top: 75px;
-    margin-bottom: 5px;
-    @include verdana-bold(24px, 30px);
+  @include verdana-bold(23px, 30px);
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .week-product__overall-text {
-    @include open-sans-bold(16px, 16px);
-    text-transform: uppercase;
-    color: #63d1bb;
+  @include open-sans-bold(16px, 16px);
+  margin-top: 10px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #63d1bb;
 }
 
-.week-product__descr, .week-product__options {
+.week-product__descr,
+.week-product__options {
     @include open-sans-normal(14px, 24px);
 }
 
+.week-product__descr {
+  margin-bottom: 30px;
+}
+
+.week-product__options-main {
+  padding: 10px 0;
+  width: 100px;
+  border-bottom: 1px solid #ececec;
+}
+
+.week-product__options-meaning {
+  width: 260px;
+  border-bottom: 1px solid #ececec;
+}
+
+.week-product__foto {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 260px;
+  height: 315px;
+  background: url("/img/triple-set-tablet@1x.jpg") no-repeat 0 0;
+}
+
 .week-product__price {
+    @include verdana-bold(16px, 24px);
     margin: 30px 0;
     text-align: center;
-    @include verdana-bold(16px, 24px);
+    color: #444444;
 }
 
 
 
 @media #{$tablet} {
   .week-product {
+    display: flex;
+    flex-direction: column;
     min-height: 451px;
   }
 
+
+  .week-product__tittle {
+    @include verdana-bold(40px, 50px);
+    margin-top: 5px;
+  }
+
   .week-product__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     margin-top: 45px;
   }
 
-  .week-product__tittle {
-  @include verdana-bold(40px, 50px);
-  margin-top: 5px;
-  float: left;
+  .week-product__body {
+    display: flex;
   }
 
-  .week-product__overall-text {
-  float: right;
+  .week-product__footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: -121px;
+    width: 259px;
   }
 
-  .week-product__wrapper {
-    float: left;
+    .week-product__wrapper {
     width: 290px;
     margin-right: 45px;
   }
@@ -65,7 +99,7 @@
   }
 
   .week-product__foto {
-    float: right;
+    margin-top: 0;
     width: 333px;
     height: 404px;
     background-color: floralwhite;
@@ -73,18 +107,39 @@
   }
 
   .week-product__price {
-    margin-top: 90px;
-    text-align: center;
-    //    не срабатывает marging-top и text-align
+    margin: auto;
+    padding-bottom: 15px;
   }
-
 }
 
 
 
 @media #{$desktop} {
+
+  .week-product__header {
+    justify-content: flex-start;
+    position: absolute;
+    top: -20px;
+    left: -28px;
+  }
+
+  .week-product__body {
+    justify-content: flex-end;
+  }
+
+  .week-product__footer {
+    margin-left: 195px;
+  }
+
+  .week-product__tittle {
+    order: 1;
+  }
+
+  .week-product__overall-text {
+    margin-right: 30px;
+  }
+
   .week-product__foto {
-    float: right;
     width: 525px;
     height: 636px;
     background-color: floralwhite;
@@ -92,26 +147,22 @@
   }
 
   .week-product {
-    min-height: 685px;
+    position: relative;
+    margin-top: 50px;
   }
 
   .week-product__tittle {
   @include verdana-bold(50px, 57px);
-  position: relative;
-  top: 0;
-  right: 0;
-  float: right;
   margin-top: 5px;
   }
 
   .week-product__overall-text {
-  float: left;
   margin-left: 30px;
   }
 
   .week-product__descr {
     @include open-sans-normal(16px, 30px);
-    margin-top: 230px;
+    margin-top: 160px;
     margin-bottom: 50px;
   }
 
@@ -120,8 +171,7 @@
     padding: 10px 0;
     border-bottom: 1px solid #ececec;
 
-     &__options-meaning: 1px solid #ececec;
+//     &__options-meaning: 1px solid #ececec;
     }
-  }
 
 }
