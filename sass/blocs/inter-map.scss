@@ -1,9 +1,16 @@
-   .inter-map img {
-   width: 100%;
+  .inter-map {
+   @include container;
+    min-height: 457px;
+    background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
   }
 
-.inter-map__button {
+  .inter-map__button {
     @include container;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
 }
 
 @media #{$tablet} {
@@ -19,5 +26,6 @@
 }
 
 @media #{$desktop} {
+
 
   }

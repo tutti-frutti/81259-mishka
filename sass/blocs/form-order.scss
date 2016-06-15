@@ -28,31 +28,9 @@ input[type="text"] + label {
   @include verdana-bold(16px, 18px);
 }
 
-.form-order__checkboxes-table {
-    border-collapse: collapse;
-}
-
-.form-order__checkboxes-table td {
-    padding: 10px;
-    width: 180px;
-}
-
-.form-order__checkboxes-table {
-    display: block;
-}
-
-tbody {
+.form-order__checkboxes-adapt {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-tr {
-    margin: 10px;
-}
-
-td {
-    display: block;
+  flex-direction: column;
 }
 
 .form-order__fio-person label {
@@ -67,87 +45,215 @@ td {
     margin-right: 50px;
 }
 
+.radio-wrapper {
+  margin: 20px 0;
+}
+
+.radio-wrapper input {
+  margin-right: 20px;
+}
+
+.radio-wrapper label {
+//  margin-left: 20px;
+}
+
+.form-order__colors-block {
+  margin: 20px 0;
+}
+
+
+
+//ПОЛЯ ФОРМЫ
+
+.form-order__fio-person label {
+  @include verdana-bold(16px, 18px);
+}
+
+.form-order__fio-person input,
+.form-order__contacts input {
+  margin: 25px 0;
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+textarea.form-order__user-message {
+  margin: 25px 0;
+  width: 252px;
+  border: 2px solid #000;
+}
+
+input::-webkit-input-placeholder {
+  font-size: 15px;
+  line-height: 30px;
+  color: #afafaf;
+}
+
+button {
+  width: 260px;
+  background-color: #fff;
+}
+
+.form-order__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 
 
 @media #{$tablet} {
-.form-order__radio-buttons-wrapper {
+
+//  ОБЩИЕ ЗАГОЛОВКИ
+
+   div.form-order__section-title,
+  label.form-order__section-title {
+    width: 167px;
+    margin-right: 0;
+  }
+
+
+//  РАДИОКНОПКИ
+
+  .form-order__radio-buttons-wrapper {
     display: flex;
   }
-    
-.form-order__checkboxes-table {
-    margin-left: 180px;
-//  правильно ли отодвигать эти элементы через margin или есть другие варианты?
-    }
 
-.radio-wrapper {
-    margin-left: 167px;
-//  правильно ли использовать такие обертки для того чтобы распределить эл с помощью флексов?
+  .form-order__radio-adapt {
+    display: flex;
+    flex-direction: column;
   }
 
-.form-order__fio-wrapper--fluid-bg {
+
+//  ЧЕКБОКСЫ
+
+  .form-order__checkboxes-wrapper {
+    display: flex;
+//    align-items: flex-start;
+  }
+
+  .form-order__checkboxes-adapt {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+    .form-order__colors-block {
+    width: 220px;
+    padding: 25px 0;
+  }
+
+//  ТЯНУЩИЕСЯ ПОЛЯ
+
+  .form-order__fio-wrapper--fluid-bg {
     background-color: #f1f1f1;
   }
-    
-.form-order__fio-person {
+
+  .form-order__fio-wrapper-1 {
     display: flex;
-    margin: 10px 0 10px 180px;
+  }
+
+  .form-order__fio-person-wrapper {
+    flex: 1;
+  }
+
+//ТЕКСТОВЫЕ ПОЛЯ --- ФИО
+
+  .form-order__fio-person {
+    display: flex;
+    margin: 10px 0 10px 0;
 }
 
 .form-order__fio-person label {
-    display: table;
-    vertical-align: middle;
+    display: flex;
+    align-self: center;
     margin-right: 20px;
 }
 
 .form-order__fio-person input {
     flex-grow: 1;
     }
-    
+
+
+
+//  ТЕСТОВЫЕ ПОЛЯ --- ТЕЛ, ПОЧТА
+
 .form-order__contacts {
     display: flex;
     margin: 10px 0;
     }
-    
+
 .form-order__contacts label {
-    display: table;
-    width: 60px;
-    vertical-align: middle;
-    margin-right: 120px;
+    width: 167px;
+    margin-right: 0;
 //  правильно ли отодвигать margin'ом?
     }
-    
+
 .form-order__contacts input {
-        flex-grow: 1;
+//        flex-grow: 1;
     }
-    
+
+  input[type="tel"],
+  input[type="email"] {
+    background: #f1f1f1;
+    flex-grow: 1;
+  }
+
+//  TEXTAREA
+
     .form-order__message {
         display: flex;
         margin: 10px 0;
     }
-    
+
     .form-order__message label {
     display: table;
-    width: 60px;
+//    width: 60px;
     vertical-align: middle;
-    margin-right: 120px;
+//    margin-right: 120px;
     }
-    
+
     .form-order__message textarea {
         flex-grow: 1;
     }
-    
+
 }
 
 @media #{$desktop} {
- 
-.form-order__fio-person {
-    margin: 10px 175px 10px 180px;
+
+//  ОБЩИЕ
+
+  .form-order__notice--show-on-large {
+    margin-right: 175px;
+  }
+
+  .form-order__submit {
+    margin-left: 167px;
+  }
+
+  .custom-service__text {
+    margin-left: 175px;
+    margin-right: 175px;
+  }
+
+  div.form-order__section-title,
+  label.form-order__section-title {
+    width: 175px;
+    margin-right: 0;
+  }
+
+  .form-order__fio-person,
+  .form-order__contacts,
+  .form-order__message {
+    margin: 10px 0 10px 0;
 }
-.form-order__contacts {
-    margin: 10px 175px 10px 0;
-    }
-    
-    .form-order__message {
-        margin: 10px 175px 10px 0
-    }
+
+
+//  ТЯНУЩИЕСЯ ПОЛЯ
+
+  .form-order__fio-person-wrapper,
+  .form-order__contacts,
+  .form-order__message {
+    margin-right: 175px;
+  }
+
 }

@@ -1,5 +1,8 @@
 .reviews {
   @include container;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
   margin-bottom: 60px;
 }
 
@@ -18,10 +21,24 @@
 }
 
 .btn-reviews__write {
+    order: 1;
     margin-top: 30px;
 }
 
+.reviews__buttons {
+  display: flex;
+  margin: 30px 0;
+}
 
+.reviews__buttons-arrows {
+  width: 126px;
+  height: 58px;
+  border: 1px solid #ececec;
+}
+
+.reviews__buttons-arrows:first-child {
+  border-right: 0;
+}
 
 
 @media #{$tablet} {
@@ -31,11 +48,9 @@
   }
 
   .reviews .btn-reviews__write {
-    position: absolute;
-    top: -26px;
-    right: 0;
+    order: 0;
+    align-self: center;
     width: 180px;
-//  как переопределить ширину кнопки без использования !important
   }
 
   .title-for-sections {
@@ -49,5 +64,12 @@
 }
 
 @media #{$desktop} {
+
+  .reviews__title,
+  .reviews__text,
+  .reviews__author,
+  .reviews__author-web-name {
+    margin-left: 175px;
+  }
 
 }

@@ -117,7 +117,10 @@
 @media #{$desktop} {
 
   .week-product__header {
-     justify-content: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    top: -20px;
+    left: -28px;
   }
 
   .week-product__body {
@@ -144,7 +147,8 @@
   }
 
   .week-product {
-//    min-height: 685px;
+    position: relative;
+    margin-top: 50px;
   }
 
   .week-product__tittle {
