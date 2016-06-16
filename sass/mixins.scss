@@ -41,19 +41,21 @@
 @mixin container() {
       width: 260px;
       margin: 0 auto;
-//      padding-left: 30px;
-//      padding-right: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
 //      background-color: bisque;
 
 
   @media #{$tablet} {
       width: 668px;
+      padding-left: 50px;
+      padding-right: 50px;
   }
 
   @media #{$desktop} {
       width: 1050px;
-//      padding-left: 50px;
-//      padding-right: 50px;
+      padding-left: 50px;
+      padding-right: 50px;
   }
 }
 
