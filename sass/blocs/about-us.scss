@@ -8,8 +8,8 @@
     position: absolute;
     content: "";
     top: -30px;
-    left: 0;
-    width: 319px;
+    left: -30px;
+    width: 320px;
     height: 6px;
     background-image: url("/img/zizzag-mobile.png");
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
 }
 
 .about-us__descr {
-  margin: 25px 0;
+  margin-bottom: 25px;
   @include verdana-bold(16px, 18px);
 }
 
@@ -29,7 +29,6 @@
 @media #{$tablet} {
   .about-us__columns {
     display: flex;
-    justify-content: space-between;
   }
 
   .about-us__descr {
@@ -42,10 +41,6 @@
 
 
 @media #{$desktop} {
-
-  .about-us__columns {
-    justify-content: flex-start;
-  }
 
   .about-us__title {
     margin-left: 175px;

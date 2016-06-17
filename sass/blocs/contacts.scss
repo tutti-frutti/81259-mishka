@@ -9,8 +9,8 @@
     position: absolute;
     content: "";
     top: -30px;
-    left: 0;
-    width: 319px;
+    left: -30px;
+    width: 320px;
     height: 6px;
     background-image: url("/img/zizzag-mobile.png");
     background-repeat: no-repeat;
@@ -21,12 +21,9 @@
   order: 1;
 }
 .contacts__blocks {
+    display: flex;
     @include open-sans-normal(14px, 30px);
     color: #444444;
-}
-
-.contacts__blocks {
-  display: flex;
 }
 
 .contacts__adresses {
@@ -37,10 +34,6 @@
   color: #444444;
 }
 
-.contacts__adresses, .contacts__destination {
-
-}
-
 .develop-company__name {
   @include verdana-bold(18px, 18px);
 }
@@ -49,16 +42,20 @@
     margin: 35px 0;
 }
 
+.contacts__body {
+  margin-bottom: 30px;
+}
+
 //MAP
 
  .contacts__map {
-   @include container;
+//   @include container;
     min-height: 457px;
     background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
   }
 
   .contacts__btn-write-us {
-    @include container;
+//    @include container;
 }
 
 
@@ -66,7 +63,7 @@
 
 @media #{$tablet} {
   .contacts {
-    @include container;
+//    @include container;
   }
 
   .contacts__body {
@@ -78,9 +75,6 @@
     width: 290px;
   }
 
-  .contacts__blocks {
-    width: 290px;
-  }
 }
 
 

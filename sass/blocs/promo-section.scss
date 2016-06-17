@@ -1,5 +1,5 @@
 .promo-section {
-  @include container;
+//  @include container;
   display: flex;
   align-items: center;
   height: 175px;
@@ -8,7 +8,7 @@
 }
 
 .promo-general {
-  @include container;
+//  @include container;
   @include verdana-bold(24px, 30px);
 }
 

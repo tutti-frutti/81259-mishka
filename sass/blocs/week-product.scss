@@ -46,7 +46,7 @@
 
 .week-product__price {
     @include verdana-bold(16px, 24px);
-    margin: 30px 0;
+    margin-bottom: 30px;
     text-align: center;
     color: #444444;
 }
@@ -78,8 +78,6 @@
   }
 
   .week-product__footer {
-    display: flex;
-    flex-direction: column;
     margin-top: -121px;
     width: 259px;
   }
@@ -96,14 +94,6 @@
 
   .week-product__options {
     @include open-sans-normal(15px, 20px);
-  }
-
-  .week-product__foto {
-    margin-top: 0;
-    width: 333px;
-    height: 404px;
-    background-color: floralwhite;
-    background: url("/img/triple-set-tablet@1x.jpg") no-repeat 50% 50%;
   }
 
   .week-product__price {

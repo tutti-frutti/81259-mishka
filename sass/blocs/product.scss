@@ -2,8 +2,8 @@
   @include container;
 }
 
-.product__item-foto {
-  margin-top: 30px;
+.product {
+  margin: 30px 0;
 }
 
 .product__item-title {
@@ -29,13 +29,12 @@
   .product {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 30px;
   }
 
   .product__item-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+//    justify-content: space-between;
     flex-basis: 332px;
     border: 1px solid #ececec;
   }
@@ -52,10 +51,6 @@
   .product__item-descr {
     margin-top: 0;
     margin-bottom: auto;
-  }
-
-  .product__item-foto {
-    margin-top: 0;
   }
 
   .product__item-foto img {

@@ -13,4 +13,6 @@
 //  height: auto;
 //}
 
-
+.container {
+  @include body;
+}

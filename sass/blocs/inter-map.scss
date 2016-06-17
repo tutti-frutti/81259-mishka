@@ -1,11 +1,11 @@
   .inter-map {
-   @include container;
+//   @include container;
     min-height: 457px;
     background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
   }
 
   .inter-map__button {
-    @include container;
+//    @include container;
 }
 
 .center {
@@ -18,7 +18,7 @@
   }
 
   .inter-map__button {
-    @include container;
+//    @include container;
     display: flex;
     justify-content: center;
   }

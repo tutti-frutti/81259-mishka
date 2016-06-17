@@ -3,14 +3,13 @@
   margin-top: 1px;
   display: flex;
   flex-direction: column;
-//  @include clearfix;
-//  max-height: 505px;
+
   background: url("/img/hero-mobile2@1x.jpg") no-repeat 50% 0;
   background-size: cover;
 }
 
 .product-category__showcase {
-  @include container;
+//  @include container;
 }
 
 .product-category__showcase-text {
@@ -21,12 +20,12 @@
 }
 
 .product-category__interior {
-  @include container;
+//  @include container;
   position: relative;
   display: flex;
   align-items: center;
-//  padding-left: 30px;
-  height: 105px;
+  padding-left: 30px;
+  min-height: 105px;
   background-color: #63d1bb;
 
   &::after {
@@ -43,12 +42,12 @@
 }
 
 .product-category__toys {
-  @include container;
+//  @include container;
   position: relative;
   display: flex;
   align-items: center;
-//  padding-left: 30px;
-  height: 105px;
+  padding-left: 30px;
+  min-height: 105px;
   background-color: #56c3b2;
 
   &::after {
@@ -65,8 +64,8 @@
 }
 
 .product-category__link {
-  text-decoration: none;
   @include tahoma-bold(18px, 24px);
+  text-decoration: none;
   color: #fff;
 }
 
@@ -86,12 +85,12 @@
     &::before {
       position: absolute;
       content: "";
-      width: 770px;
+      width: 100%;
       height: 24px;
       bottom: -12px;
-      left: 48px;
+      left: -1;
       background-image: url("/img/zizzag-desktop.png");
-      background-repeat: no-repeat;
+      background-repeat: repeat;
       z-index: 1;
     }
   }
@@ -116,7 +115,7 @@
   }
 
   .product-category__toys {
-    flex-grow: 0;
+    flex-grow: 1;
   }
 
   .product-category__link {

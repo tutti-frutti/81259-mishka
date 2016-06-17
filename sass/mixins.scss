@@ -42,16 +42,39 @@
       width: 260px;
       margin: 0 auto;
 //      padding-left: 30px;
-//      padding-right: 30px;
+//      padding-right: 30px
 //      background-color: bisque;
 
 
   @media #{$tablet} {
       width: 668px;
+//      padding-left: 50px;
+//      padding-right: 50px;
   }
 
   @media #{$desktop} {
       width: 1050px;
+//      padding-left: 50px;
+//      padding-right: 50px;
+  }
+}
+
+@mixin body() {
+      width: 320px;
+      margin: 0 auto;
+//      padding-left: 30px;
+//      padding-right: 30px
+//      background-color: cornflowerblue ;
+
+
+  @media #{$tablet} {
+      width: 768px;
+//      padding-left: 50px;
+//      padding-right: 50px;
+  }
+
+  @media #{$desktop} {
+      width: 1150px;
 //      padding-left: 50px;
 //      padding-right: 50px;
   }

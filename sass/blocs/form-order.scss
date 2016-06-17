@@ -3,7 +3,7 @@
 .form-order__fio-wrapper-1,
 .form-order__fio-wrapper-2,
 .form-order__fio-wrapper-3{
-  @include container;
+//  @include container;
 //пришлось разделить форму на эти блоки, чтобы отдельным блокам задать тянущийся background
 }
 
@@ -143,10 +143,6 @@ button {
   }
 
 //  ТЯНУЩИЕСЯ ПОЛЯ
-
-  .form-order__fio-wrapper--fluid-bg {
-    background-color: #f1f1f1;
-  }
 
   .form-order__fio-wrapper-1 {
     display: flex;
