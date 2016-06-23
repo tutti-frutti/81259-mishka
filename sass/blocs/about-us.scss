@@ -24,6 +24,12 @@
   @include verdana-bold(16px, 18px);
 }
 
+.about-us__icon svg {
+  width: 45px;
+  height: 45px;
+  fill: #63d1bb;
+}
+
 
 
 @media #{$tablet} {

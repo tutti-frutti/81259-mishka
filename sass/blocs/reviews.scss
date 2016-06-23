@@ -30,14 +30,13 @@
   margin: 30px 0;
 }
 
-.reviews__buttons-arrows {
-  width: 126px;
-  height: 58px;
-  border: 1px solid #ececec;
+.reviews__buttons-arrows:first-child {
+  margin-right: 30px;
 }
 
-.reviews__buttons-arrows:first-child {
-  border-right: 0;
+.reviews__buttons-arrows svg {
+  width: 50px;
+  height: 30px;
 }
 
 
