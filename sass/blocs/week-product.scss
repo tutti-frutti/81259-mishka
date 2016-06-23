@@ -39,10 +39,13 @@
 .week-product__foto {
   margin-top: 30px;
   margin-bottom: 30px;
-  width: 260px;
-  height: 315px;
-  background: url("/img/triple-set-tablet@1x.jpg") no-repeat 0 0;
+//  width: 260px;
+//  height: 315px;
 }
+
+//.week-product__foto img {
+//  width: 100%;
+//}
 
 .week-product__price {
     @include verdana-bold(16px, 24px);

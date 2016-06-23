@@ -49,17 +49,12 @@
 //MAP
 
  .contacts__map {
-//   @include container;
     min-height: 457px;
-    background: url("/img/map-mobile@1x.jpg") no-repeat 50%;
-  }
-
-  .contacts__btn-write-us {
-//    @include container;
 }
 
 
-//MEDIA TABLET
+
+   //MEDIA TABLET
 
 @media #{$tablet} {
   .contacts {
@@ -104,5 +99,4 @@
     margin-top: -90px;
     margin-left: 175px;
   }
-
 }

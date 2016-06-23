@@ -14,12 +14,12 @@
 }
 
 input[type="radio"] + label {
-  padding: 30px 0;
+//  padding: 30px 0;
   @include verdana-bold(16px, 18px);
 }
 
 input[type="checkbox"] + label {
-  padding: 30px 0;
+//  padding: 30px 0;
   @include verdana-bold(16px, 18px);
 }
 
@@ -31,6 +31,80 @@ input[type="text"] + label {
 .form-order__checkboxes-adapt {
     display: flex;
   flex-direction: column;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  display: block;
+  margin: 12px 0;
+  padding-left: 80px;
+  cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label::after {}
+
+input[type="radio"]:checked + label::after {
+position: absolute;
+  content: "";
+  top: -2px;
+  left: 17px;
+  width: 20px;
+  height: 20px;
+  background: #62d1ba;
+  border-radius: 50%;
+}
+
+input[type="radio"] + label:hover::before {
+  border: 2px solid #62d1ba;
+}
+
+input[type="radio"] + label:active::before {
+  border: 2px solid #c7c7c7;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  display: block;
+  margin: 30px 0;
+  padding-left: 80px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  position: absolute;
+  content: "";
+  top: -20px;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+}
+
+input[type="checkbox"] + label:hover::before {
+  border: 2px solid #62d1ba;
+}
+
+input[type="checkbox"] + label:active::before {
+  border: 2px solid #c7c7c7;
 }
 
 .form-order__fio-person label {
@@ -58,7 +132,7 @@ input[type="text"] + label {
 }
 
 .form-order__colors-block {
-  margin: 20px 0;
+//  margin: 20px 0;
 }
 
 
@@ -108,10 +182,10 @@ button {
 
    div.form-order__section-title,
   label.form-order__section-title {
-    width: 167px;
+    padding-left: 50px;
     margin-right: 0;
+    width: 167px;
   }
-
 
 //  РАДИОКНОПКИ
 
@@ -129,17 +203,20 @@ button {
 
   .form-order__checkboxes-wrapper {
     display: flex;
+    background: #f1f1f1;
 //    align-items: flex-start;
   }
 
   .form-order__checkboxes-adapt {
     flex-direction: row;
     flex-wrap: wrap;
+    padding: 50px 0;
+    width: 480px;
   }
 
     .form-order__colors-block {
-    width: 220px;
-    padding: 25px 0;
+    width: 240px;
+//    padding: 25px 0;
   }
 
 //  ТЯНУЩИЕСЯ ПОЛЯ
@@ -172,6 +249,11 @@ button {
 
 
 //  ТЕСТОВЫЕ ПОЛЯ --- ТЕЛ, ПОЧТА
+
+  .form-order__fio-wrapper-2 {
+    padding: 50px 0;
+    background: #f1f1f1;
+  }
 
 .form-order__contacts {
     display: flex;
@@ -233,15 +315,23 @@ button {
 
   div.form-order__section-title,
   label.form-order__section-title {
-    width: 175px;
+//    padding-left: 50px;
     margin-right: 0;
+    width: 175px;
   }
+
 
   .form-order__fio-person,
   .form-order__contacts,
   .form-order__message {
     margin: 10px 0 10px 0;
 }
+
+  //  ЧЕКБОКСЫ
+
+  .form-order__checkboxes-adapt {
+    width: 745px;
+  }
 
 
 //  ТЯНУЩИЕСЯ ПОЛЯ

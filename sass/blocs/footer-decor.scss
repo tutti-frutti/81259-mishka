@@ -2,10 +2,6 @@
   background: $footer-color;
 }
 
-.footer-decor__wrapper {
-//  @include container;
-}
-
 .social-links,
 .develop-company {
   display: flex;
@@ -15,7 +11,7 @@
 }
 
 .footer-decor__wrapper .logo-in-footer {
-  display: none;
+//  display: none;
 }
 
 @media #{$tablet} {
@@ -26,14 +22,25 @@
   }
 }
 
-.footer-decor .logo-in-footer {
-    display: block;
+.footer-decor__wrapper .logo-in-footer svg {
+  display: block;
+  margin-left: 50px;
+  width: 105px;
+  height: 35px;
+      &:hover {
+        fill: #46c1ae;
+    }
+      &:active {
+        fill: #bde3dd;
+    }
+
+  .develop-company {
+    margin-right: 50px;
   }
-//  .logo-in-footer,
-//  .social-links,
-//  .develop-company {
-//    display: inline-block;
-//  не срабатывает inline-block или float: left;
+}
+
+
+
 
 @media #{$desktop} {
 

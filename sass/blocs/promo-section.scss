@@ -8,15 +8,20 @@
 }
 
 .promo-general {
-//  @include container;
   @include verdana-bold(24px, 30px);
+  margin: auto;
 }
 
 
 
 @media #{$tablet} {
 
-
+  .promo-section {
+    position: relative;
+    top: -80px;
+    height: 221px;
+    z-index: -1;
+  }
 
 }
 

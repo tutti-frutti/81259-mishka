@@ -5,6 +5,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
   grunt.loadNpmTasks("grunt-sass");
+  grunt.loadNpmTasks("grunt-svgstore");
+//  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     sass: {
@@ -58,8 +60,29 @@ module.exports = function(grunt) {
           spawn: false
         }
       }
+    },
+    svgstore: {
+      options: {
+        svg: {
+          style: "display: none;"
+        }
+      },
+      symbols: {
+        files: {
+          "img/symbols.svg": ["img/icons/*.svg"]
+        }
+      }
     }
+//    svgmin: {
+//      symbols: {
+//        files: [{
+//          expand: true,
+//          src: ["img/icons/*.svg"]
+//        }]
+//      }
+//    }
   });
 
-  grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("serve", ["browserSync", "watch"]),
+  grunt.registerTask("symbols", ["svgstore"]);
 };
