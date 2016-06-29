@@ -1,24 +1,25 @@
 .contacts {
-  @include container;
+//  @include container;
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 35px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -30px;
-    left: -30px;
-    width: 320px;
-    height: 6px;
-    background-image: url("/img/zizzag-mobile.png");
-    background-repeat: no-repeat;
-  }
+//  &::before {
+//    position: absolute;
+//    content: "";
+//    top: -30px;
+//    left: -30px;
+//    width: 320px;
+//    height: 6px;
+//    background-image: url("/img/zizzag-mobile.png");
+//    background-repeat: no-repeat;
+//  }
 }
 
 .contacts__button {
   order: 1;
+  margin: 0 auto;
 }
 .contacts__blocks {
     display: flex;
@@ -49,7 +50,20 @@
 //MAP
 
  .contacts__map {
-    min-height: 457px;
+   position: relative;
+//    min-height: 457px;
+}
+
+.contacts__map-icon svg {
+  position: absolute;
+  top: 120px;
+  left: 90px;
+  width: 70px;
+  height: 100px;
+}
+
+.contacts__map-icon-flag svg {
+  display: none;
 }
 
 
@@ -57,17 +71,57 @@
    //MEDIA TABLET
 
 @media #{$tablet} {
+
   .contacts {
-//    @include container;
+    margin-bottom: 19px;
   }
 
-  .contacts__body {
+   .contacts__body {
     display: flex;
   }
 
+  .contacts__title {
+    margin-bottom: 50px;
+    padding-left: 0;
+  }
+
   .contacts__blocks {
-    margin-right: 30px;
-    width: 290px;
+    @include open-sans-normal(16px, 30px);
+    margin-right: 8px;
+    width: 310px;
+  }
+
+  .contacts__blocks:last-child .contacts__adresses {
+    padding-left: 15px;
+    margin-right: 0;
+  }
+
+  .contacts__wrapper {
+    margin-bottom: 25px;
+    padding: 0 50px;
+  }
+
+  .contacts .contacts__btn-write-us {
+    margin: 35px 0;
+    width: 227px;
+}
+
+  .contacts__map {
+    margin-bottom: 17px;
+  }
+
+  .contacts__map-icon svg {
+    top: 167px;
+    left: 346px;
+}
+
+  .contacts__map-icon-flag svg {
+    display: block;
+    position: absolute;
+    top: -260px;
+    right: 47px;
+    width: 55px;
+    height: 80px;
   }
 
 }
@@ -79,6 +133,7 @@
 
   .contacts {
     flex-flow: row wrap;
+    margin-bottom: 46px;
   }
 
   .contacts__wrapper {
@@ -86,17 +141,44 @@
     margin-left: 175px;
   }
 
+  .contacts__title {
+    @include verdana-bold(50px, 57px);
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-left: -5px;
+    padding-left: 0;
+  }
+
   .contacts__body {
     flex-direction: column;
   }
 
-  .contacts__map {
-    width: 525px;
-    background: url("/img/map-desktop.jpg") no-repeat center center;
+  .contacts__blocks:last-child .contacts__adresses {
+    padding-left: 0;
+    margin-right: 0;
   }
 
-  .contacts__btn-write-us {
-    margin-top: -90px;
-    margin-left: 175px;
+  .contacts__destination {
+    margin-bottom: 29px;
   }
+
+  .contacts__button {
+    margin: 35px 0 0 0;
+  }
+
+  .contacts__button .contacts__btn-write-us {
+    width: 228px;
+    margin-top: -106px;
+    margin-left: 226px;
+  }
+
+  .contacts__map {
+   margin-left: -51px;
+  }
+
+  .contacts__map-icon-flag svg {
+    top: 63px;
+    left: -466px;
+  }
+
 }

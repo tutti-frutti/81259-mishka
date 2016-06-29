@@ -1,6 +1,24 @@
 .custom-service {
-//  @include container;
+  @include container;
   @include open-sans-normal(14px, 25px);
-  margin-top: 30px;
   margin-bottom: 30px;
+}
+
+@media #{$tablet} {
+  .custom-service {
+    @include open-sans-normal(16px, 30px);
+    padding-left: 50px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .custom-service p {
+    margin: 0;
+  }
+}
+
+  @media #{$desktop} {
+    .custom-service {
+     padding-left: 225px;
+    }
 }

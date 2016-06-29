@@ -4,4 +4,40 @@
 
 ul.social-links__list li {
   display: inline-block;
+  padding: 0 20px;
 }
+
+.social-links__icons svg {
+  width: 30px;
+  height: 30px;
+  fill: #231F20;
+  &:hover {
+    fill: #46c1ae;
+  }
+  &:active {
+    fill: #bde3dd;
+  }
+}
+
+.social-links {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+@media #{$tablet} {
+
+  .social-links {
+    margin-top: 41px;
+    margin-left: 105px;
+    border-bottom: 0;
+  }
+
+  ul.social-links__list li {
+  padding: 0 15px;
+}
+
+  .social-links__icons svg {
+  width: 25px;
+  height: 25px;
+  }
+}
+

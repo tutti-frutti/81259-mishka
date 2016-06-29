@@ -1,5 +1,8 @@
 .week-product {
-  @include container;
+  position: relative;
+  margin-bottom: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .week-product__tittle {
@@ -39,13 +42,7 @@
 .week-product__foto {
   margin-top: 30px;
   margin-bottom: 30px;
-//  width: 260px;
-//  height: 315px;
 }
-
-//.week-product__foto img {
-//  width: 100%;
-//}
 
 .week-product__price {
     @include verdana-bold(16px, 24px);
@@ -54,26 +51,43 @@
     color: #444444;
 }
 
+.week-product__icon svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20px;
+  }
+
+
 
 
 @media #{$tablet} {
   .week-product {
     display: flex;
     flex-direction: column;
+    margin-top: -36px;
     min-height: 451px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
 
-  .week-product__tittle {
+  .week-product__header .week-product__tittle {
     @include verdana-bold(40px, 50px);
-    margin-top: 5px;
+    margin-top: 0;
+  }
+
+  .week-product__overall-text {
+    margin: 0;
+    width: 75px;
+    text-align: center;
   }
 
   .week-product__header {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    margin-top: 45px;
+    align-items: center;
+    margin: 2px 26px 61px -6px;
   }
 
   .week-product__body {
@@ -82,7 +96,7 @@
 
   .week-product__footer {
     margin-top: -121px;
-    width: 259px;
+    width: 290px;
   }
 
     .week-product__wrapper {
@@ -90,9 +104,18 @@
     margin-right: 45px;
   }
 
+  .week-product__foto {
+    margin-top: 0;
+  }
+
+  .week-product__footer .week-product__btn-order {
+    width: 290px;
+  }
+
   .week-product__descr {
     @include open-sans-normal(16px, 30px);
-    margin-bottom: 50px;
+    margin-top: -10px;
+    margin-bottom: 36px;
   }
 
   .week-product__options {
@@ -101,7 +124,12 @@
 
   .week-product__price {
     margin: auto;
-    padding-bottom: 15px;
+    margin-top: -24px;
+    padding-bottom: 35px;
+  }
+
+  .week-product__icon svg {
+    bottom: -40px;
   }
 }
 
@@ -112,8 +140,8 @@
   .week-product__header {
     justify-content: flex-start;
     position: absolute;
-    top: -20px;
-    left: -28px;
+    top: 13px;
+    left: 102px;
   }
 
   .week-product__body {
@@ -121,7 +149,7 @@
   }
 
   .week-product__footer {
-    margin-left: 195px;
+    margin-left: 175px;
   }
 
   .week-product__tittle {
@@ -129,42 +157,43 @@
   }
 
   .week-product__overall-text {
-    margin-right: 30px;
+    margin-right: 40px;
   }
-
-  .week-product__foto {
-    width: 525px;
-    height: 636px;
-    background-color: floralwhite;
-    background: url("/img/triple-set-desktop@1x.jpg") no-repeat 50% 50%;
   }
 
   .week-product {
     position: relative;
-    margin-top: 50px;
+    margin-bottom: 131px;
   }
 
-  .week-product__tittle {
+  .week-product__header .week-product__tittle {
   @include verdana-bold(50px, 57px);
-  margin-top: 5px;
+  margin-top: -3px;
+  margin-left: 8px;
   }
 
-  .week-product__overall-text {
-  margin-left: 30px;
-  }
-
-  .week-product__descr {
+  .week-product__descr-lg {
     @include open-sans-normal(16px, 30px);
-    margin-top: 160px;
-    margin-bottom: 50px;
+    margin-top: 120px;
+    margin-bottom: 47px;
+    margin-left: -14px;
   }
+
+.week-product__foto {
+  margin-top: -38px;
+}
+
+.week-product__options {
+  margin-left: -14px;
+}
 
   td.week-product__options-main {
     width: 100px;
     padding: 10px 0;
     border-bottom: 1px solid #ececec;
-
-//     &__options-meaning: 1px solid #ececec;
     }
 
-}
+    .week-product__icon svg {
+    height: 30px;
+    bottom: -66px;
+  }

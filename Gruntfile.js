@@ -1,12 +1,12 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
-  grunt.loadNpmTasks("grunt-sass");
-  grunt.loadNpmTasks("grunt-svgstore");
-//  require("load-grunt-tasks")(grunt);
+//  grunt.loadNpmTasks("grunt-browser-sync");
+//  grunt.loadNpmTasks("grunt-contrib-watch");
+//  grunt.loadNpmTasks("grunt-postcss");
+//  grunt.loadNpmTasks("grunt-sass");
+//  grunt.loadNpmTasks("grunt-svgstore");
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     sass: {
@@ -27,7 +27,10 @@ module.exports = function(grunt) {
               "last 2 Firefox versions",
               "last 2 Opera versions",
               "last 2 Edge versions"
-            ]})
+            ]}),
+            require("css-mqpacker")({
+            sort: true
+            })
           ]
         },
         src: "css/*.css"
@@ -72,6 +75,41 @@ module.exports = function(grunt) {
           "img/symbols.svg": ["img/icons/*.svg"]
         }
       }
+    },
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "css/style.min.css": ["css/style.css"]
+        }
+      }
+    },
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3
+        },
+        files: [{
+          expand: true,
+          src: ["img/**/*.{png,jpg}"]
+        }]
+      }
+    },
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff, woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
     }
 //    svgmin: {
 //      symbols: {
@@ -85,4 +123,11 @@ module.exports = function(grunt) {
 
   grunt.registerTask("serve", ["browserSync", "watch"]),
   grunt.registerTask("symbols", ["svgstore"]);
+
+//  grunt.registerTask("biuld", {
+//    "saas",
+//    "postcss",
+//    "csso",
+//    "imagemin"
+//  })
 };

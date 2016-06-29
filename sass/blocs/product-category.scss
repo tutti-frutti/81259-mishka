@@ -73,12 +73,14 @@
   text-decoration: underline;
 }
 
-
+.product-category__icon svg {
+  display: none;
+}
 
 @media #{$tablet} {
   .product-category {
  position: relative;
- top: -81px;
+ top: -73px;
  flex-direction: column;
  min-height: 730px;
  background: url("/img/hero-desktop@1x.jpg") no-repeat 50% 0;
@@ -91,25 +93,28 @@
   }
 
     &::before {
-      position: absolute;
-      content: "";
-      width: 100%;
-      height: 24px;
-      bottom: -12px;
-      left: -1;
-      background-image: url("/img/zizzag-desktop.png");
-      background-repeat: repeat;
-      z-index: 1;
+//      position: absolute;
+//      content: "";
+//      width: 100%;
+//      height: 24px;
+//      bottom: -12px;
+//      left: -1;
+//      background-image: url("/img/zizzag-desktop.png");
+//      background-repeat: repeat;
+//      z-index: 1;
     }
   }
 
   .product-category__showcase {
     min-height: 625px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .product-category__showcase-text {
     @include verdana-bold(40px, 50px);
-    padding-top: 140px;
+    padding-top: 152px;
+    min-width: 640px;
     text-align: center;
   }
 
@@ -124,18 +129,38 @@
 
   .product-category__interior {
     flex-grow: 1;
-//  почему не срабатывает flex-grow?
+    padding-left: 30px;
+    min-height: 125px;
+    &:after {
+      top: 31px;
+      right: 36px;
+    }
   }
 
   .product-category__toys {
     flex-grow: 1;
+    padding-left: 30px;
+    min-height: 125px;
+    &:after {
+      top: 36px;
+      right: 23px;
+    }
   }
 
   .product-category__link {
     @include tahoma-bold(20px, 30px);
-    padding-left: 35px;
     display: block;
   }
+
+.product-category__icon svg {
+  display: block;
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  fill: #fff;
+}
 
 }
 
@@ -143,6 +168,8 @@
 
 @media #{$desktop} {
   .product-category {
+    margin-bottom: 70px;
+    top: -72px;
     min-height: 734px;
     background: url("/img/hero-desktop@1x.jpg") no-repeat 50% 0;
 
@@ -154,7 +181,8 @@
 
   .product-category__showcase-text {
     @include verdana-bold(50px, 57px);
-    padding: 160px 95px 355px 95px;
+    padding: 152px 95px 355px 101px;
+    width: 848px;
   }
 
   .product-category__interior,

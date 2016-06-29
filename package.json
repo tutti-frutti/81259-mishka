@@ -14,14 +14,19 @@
   "homepage": "https://github.com/htmlacademy-adaptive/81259-mishka",
   "devDependencies": {
     "autoprefixer": "6.3.6",
+    "css-mqpacker": "^5.0.1",
     "editorconfig-tools": "0.1.1",
     "grunt": "1.0.1",
     "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-watch": "1.0.0",
+    "grunt-csso": "^1.0.0",
     "grunt-postcss": "0.8.0",
     "grunt-sass": "1.2.0",
     "grunt-svgmin": "^3.2.0",
-    "grunt-svgstore": "^1.0.0"
+    "grunt-svgstore": "^1.0.0",
+    "load-grunt-tasks": "^3.5.0"
   },
   "scripts": {
     "test": "editorconfig-tools check *",

@@ -4,16 +4,16 @@
   margin-top: 60px;
   margin-bottom: 60px;
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: -30px;
-    left: -30px;
-    width: 320px;
-    height: 6px;
-    background-image: url("/img/zizzag-mobile.png");
-    background-repeat: no-repeat;
-  }
+//  &::before {
+//    position: absolute;
+//    content: "";
+//    top: -30px;
+//    left: -30px;
+//    width: 320px;
+//    height: 6px;
+//    background-image: url("/img/zizzag-mobile.png");
+//    background-repeat: no-repeat;
+//  }
 }
 .title-for-sections {
   @include verdana-bold(24px, 30px);
@@ -28,31 +28,55 @@
   width: 45px;
   height: 45px;
   fill: #63d1bb;
+  &:hover {
+    fill: red;
+  }
 }
 
 
 
 @media #{$tablet} {
+
+  .about-us {
+    position: static;
+    margin-bottom: 80px;
+  }
+
   .about-us__columns {
     display: flex;
   }
 
   .about-us__descr {
     @include verdana-bold(20px, 22px);
-    padding: 50px 0;
+    margin-bottom: 21px;
+    padding: 20px 0;
     width: 335px;
   }
+
+  .about-us__icon svg #Layer_1 {
+    width: 37px;
+    height: 31px;
+  }
+
 }
 
 
 
 @media #{$desktop} {
 
-  .about-us__title {
-    margin-left: 175px;
+  .about-us .about-us__title {
+    @include verdana-bold(50px, 57px);
+    margin-top: -11px;
+    margin-left: 154px;
   }
   .about-us__left-column {
     margin-left: 175px;
-    margin-right: 100px;
+    margin-right: 18px;
+  }
+
+  .about-us__descr {
+    margin-bottom: 0;
+    padding-top: 4px;
+    padding-bottom: 59px;
   }
 }

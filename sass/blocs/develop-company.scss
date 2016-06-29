@@ -1,3 +1,34 @@
 .develop-company {
     background-color: $footer-color;
+  padding-right: 50px;
+}
+
+.develop-company__icon svg {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 35px;
+  height: 38px;
+  fill: #63d1bb;
+  &:hover {
+      fill: #46c1ae;
+    }
+  &:active {
+    fill: #c7e5e1;
+  }
+}
+
+@media #{$tablet} {
+
+  .develop-company__name {
+    margin-top: 32px;
+    margin-left: 32px;
+  }
+
+  .develop-company__icon svg {
+    margin-top: 42px;
+    padding-left: 25px;
+    padding-right: 0;
+    width: 28px;
+    height: 38px;
+  }
 }
