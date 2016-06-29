@@ -1,6 +1,7 @@
 .develop-company {
     background-color: $footer-color;
   padding-right: 50px;
+  padding-left: 90px;
 }
 
 .develop-company__icon svg {
@@ -14,6 +15,10 @@
     }
   &:active {
     fill: #c7e5e1;
+  }
+
+  .develop-company__name {
+
   }
 }
 

@@ -110,6 +110,9 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       }
+    },
+    clean: {
+      build: ["build"]
     }
 //    svgmin: {
 //      symbols: {

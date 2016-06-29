@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-top: 36px;
   margin-bottom: 50px;
 }
 
@@ -10,7 +11,7 @@
   @include verdana-bold(16px, 24px);
   order: -1;
   display: block;
-  padding: 30px 0 30px 90px;
+  padding: 23px 0 30px 90px;
   border: 1px solid $borders;
 }
 
@@ -21,7 +22,7 @@
 
 .making-process__text {
 
-  padding: 30px 0 30px 30px;
+  padding: 19px 30px 26px 36px;
   @include open-sans-normal(14px, 24px);
 }
 
@@ -48,17 +49,17 @@
 
 .making-process__icon svg {
   position: absolute;
-  top: 40px;
-  left: 30px;
-  width: 37px;
-  height: 25px;
+  top: 28px;
+  left: 31px;
+  width: 40px;
+  height: 35px;
   fill: #63d1bb;
 }
 
 .making-process__icon-play svg {
   position: absolute;
-  top: 145px;
-  left: 70px;
+  top: 136px;
+  left: 78px;
   width: 110px;
   height: 80px;
 }
@@ -129,6 +130,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
+    margin-bottom: 108px;
   }
 
   .making-process__video {
@@ -147,29 +149,34 @@
   }
 
   .making-process__btn-make-order {
+    margin: 0;
+    margin-top: 12px;
+    margin-left: 48px;
+
     width: 230px;
   }
 
   .making-process .making-process__title {
     position: absolute;
     width: 140px;
-    top: 60px;
-    right: 180px;
+    top: 51px;
+    right: 150px;
     border: 0;
 }
 
   .making-process__text {
     width: 245px;
+    margin: 31px 0 8px 60px;
   }
 
   .making-process__icon-play svg {
-  top: 180px;
-  left: 332px;
+  top: 186px;
+  left: 349px;
 }
 
   .making-process__icon svg {
     top: 40px;
-    left: 725px;
+    left: 761px;
   }
 
 }
