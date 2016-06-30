@@ -19,13 +19,14 @@
   color: #63d1bb;
 }
 
-.week-product__descr,
 .week-product__options {
     @include open-sans-normal(14px, 24px);
 }
 
 .week-product__descr {
+  @include open-sans-normal(14px, 24px);
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .week-product__options-main {
@@ -72,7 +73,7 @@
   }
 
 
-  .week-product__header .week-product__tittle {
+  .week-product__tittle {
     @include verdana-bold(40px, 50px);
     margin-top: 0;
   }
@@ -112,7 +113,7 @@
     width: 290px;
   }
 
-  .week-product__descr {
+  .week-product__descr--tablet {
     @include open-sans-normal(16px, 30px);
     margin-top: -10px;
     margin-bottom: 36px;
@@ -137,6 +138,16 @@
 
 @media #{$desktop} {
 
+  .week-product {
+    margin-bottom: 10px;
+  }
+
+  .week-product__wrapper {
+    margin-bottom: 1px;
+    margin-right: 1px;
+//    test
+  }
+
   .week-product__header {
     justify-content: flex-start;
     position: absolute;
@@ -152,8 +163,11 @@
     margin-left: 175px;
   }
 
-  .week-product__tittle {
+  .week-product .week-product__tittle {
     order: 1;
+    margin-top: -3px;
+    margin-left: 8px;
+    @include verdana-bold(50px, 57px);
   }
 
   .week-product__overall-text {
@@ -166,13 +180,7 @@
     margin-bottom: 131px;
   }
 
-  .week-product__header .week-product__tittle {
-  @include verdana-bold(50px, 57px);
-  margin-top: -3px;
-  margin-left: 8px;
-  }
-
-  .week-product__descr-lg {
+  .week-product__descr--desk {
     @include open-sans-normal(16px, 30px);
     margin-top: 120px;
     margin-bottom: 47px;
